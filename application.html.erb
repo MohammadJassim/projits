@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projits</title>
+<!--  <%= stylesheet_link_tag 'application', 'data-turbolinks-track' => true  %> -->
+<!--  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+<!--  <%= csrf_meta_tags %> -->
+</head>
+<body>
+<br /><br />
+<div id="topPane">
+</div>
+
+<div id="mainPane">
+  <%= yield %><br /><br />
+</div>
+
+<div id="menuPane" style="display:block">
+  <table>
+    <tr> <!-- class="<%= displayOn %>"> -->
+     <! -- <% unless current_user.nil? %>  --> 
+      <td class="menuTD">
+	<%= link_to "Create New Group",{:action => 'new', :controller => 'study_groups'} %>
+      </td>
+      <td class="menuTD">
+	<%= link_to "My Groups", {:action => 'get_user_groups', :controller => 'study_groups'} %>
+      </td>
+      <td class="menuTD">
+    	<%= link_to "Groups List",{:action => 'index', :controller => 'study_groups'} %>
+      </td>
+      <td class="menuTD">
+        <%= link_to "My Group Activities",{:action => 'get_user_activities', :controller => 'activities'} %>
+      </td>
+      <td class="menuTD">
+        <%= link_to "My Group Tasks", {:action => 'get_user_tasks', :controller => 'tasks'} %>
+      </td>
+      <td class="menuTD">
+       <%= link_to "My Group Posts", {:action => 'get_user_posts', :controller => 'posts', :id => current_user } %><br />
+      </td>
+      </td>
+      <td class="menuTD">
+        <%= link_to "My Board",{:action => 'show', :controller => 'users', :id => current_user }, {:class => "other_link"} %>
+      </td>
+      <td class="menuTD">
+        <%= link_to "Contact", {:action => :contact_form, :controller => 'users'}, {:class=> "light"} %>
+      </td>
+      <td class="menuTD">
+	<%= link_to "About", {:action => "index", :controller => "abouts" } %>
+      </td>
+    <!--  <% end %> -->
+    </tr>
+  </table>
+</div>
+
+
+<% unless current_user.nil? %>
+<div id="smallMenuDiv">
+  <p align="center">
+    <%= link_to login_out, :controller => :users, :action => :logout %>  
+  </p>
+</div>
+<% end %>
+
+<% unless current_user.nil? %>
+<div id="summaryDiv" style="display:block">
+  <b><p class="light" align="center">Study Group</p></b> 
+  <ul class="rightMenuList">
+      * Create a Study Group 
+  </ul>
+  <ul class="rightMenuList">
+      * Set Group Location, Date
+  </ul>
+  <ul class="rightMenuList">
+      * Set Learning Activities
+  </ul>
+  <ul class="rightMenuList">
+      * Set Learning Tasks
+  </ul>
+</div>
+
+<div id="notesDiv" style="display:block">
+  <b><p class="light" align="center">Study Group</p></b> 
+  <ul class="rightMenuList">
+      * Join a Study Group
+  </ul>
+  <ul class="rightMenuList">
+      * Attend Group Activities
+  </ul>
+  <ul class="rightMenuList">
+      * Work on Group Tasks
+  </ul>
+  <ul class="rightMenuList">
+      * Apply your learning
+  </ul>
+</div>
+
+<div id="activitiesDiv" style="display:none">
+  <% unless current_user.nil? %>
+    <p class="dark">ACTIVITIES</p><br />
+  <% end %>
+  <%= link_to 'Activities', :controller => :activities, :action => :get_user_activities %>
+</div>
+
+<div id="tasksSummaryDiv" style="display:none">
+  <% unless current_user.nil? %>
+    <p class="dark">TASKS</p><br /> 
+    <%= link_to 'Tasks', :controller => :tasks, :action => :get_user_tasks %>
+  <% end %>
+</div>
+
+<div id="leftMenuDiv" style="display:block">
+  <p style="text-align:center;"><b>Group Work</b></p><br />
+  <% unless current_user.nil? %>
+    <%= link_to "* Create New Group", {:action => 'new', :controller => 'study_groups'}, :class => "light" %><br /><br />
+   <%= link_to "* Join a Group",{:action => 'index', :controller => 'study_groups'}, :class => "light" %><br /><br />
+    <%= link_to "* Set Group Details", {:action => 'get_user_groups', :controller => 'study_groups'}, :class=>"light" %><br /><br />
+</div>
+
+<div id="leftMenuSubDiv">
+  <p style="text-align:center;"><b>Group World</b></p><br />
+    <%= link_to "* My Groups", {:action => 'get_user_groups', :controller => 'study_groups'}, :class=>"light" %><br /><br />
+   <%= link_to "* Groups List",{:action => 'index', :controller => 'study_groups'}, :class => "light" %><br /><br />
+    <%= link_to "* My Group Activities",{:action => 'get_user_activities', :controller => 'activities'}, :class => 'light' %><br /><br />
+    <%= link_to "* My Group Tasks",{:action => 'get_user_tasks', :controller => 'tasks'}, {:class => 'light'} %><br /><br />
+
+    <%= link_to "* My Group Posts",{:action => 'get_user_posts', :controller => 'posts', :id => current_user }, {:class => 'light'} %><br /><br />
+
+    <%= link_to "* My Dashboard",{:action => 'show', :controller => 'users', :id => current_user }, {:class => 'light'} %><br /><br />
+    <%= link_to "* Help",{:action => :contact_form, :controller => 'users' }, {:class => 'light'} %><br /><br /><br />
+
+    <!-- <%= link_to "* Pending Activities",{:action => 'get_user_activities', :controller => 'activities' }, {:class => 'light'} %><br /><br /> -->
+    <!--  <%= link_to image_tag("butonPosts.png", alt: "Posts"),{:action => 'get_user_posts', :controller => 'posts', :id => current_user }, {:class => 'dock-item'} %><br /> -->
+      </td>
+  <% end %>
+
+
+  <div id="bottomPane">
+    <p class="faded">Copyright &copy; 2018 by Projits Solutions Pvt Ltd. All Rights Reserved. 
+    <%= link_to "Contact Us", {:action => :contact_form, :controller => 'users' }, {:class=> "light"} %></p>
+  </div>
+</div>
+
+
+<% end %>
+
+</body>
+</html>
