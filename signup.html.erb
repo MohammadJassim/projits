@@ -1,0 +1,66 @@
+
+  <%= form_for(@user) do |f| %>
+  <div>
+    <h1>SIGNUP</h1><br /><br />
+    <p class="dark">Please fill in the details below. ALL fields required.</p><br /><br />
+    <table id="signupTable">
+      <tr>
+        <td valign="top" width="210px">
+	  <%= f.label :user_login, 'LOGIN' %>
+	</td>
+	<td>
+	  <%= f.text_field :login, :size => 23 %><font color="red">*</font><br />
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :hashed_password, 'PASSWORD' %>
+	</td>
+	<td>
+	  <%= f.password_field :hashed_password, :size => 23 %><font color="red">*</font><br />
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :password_confirmation, 'CONFIRM PASSWORD' %>
+	</td>
+	<td>		
+	  <%= f.password_field :password_confirmation, :size => 23 %><font color="red">*</font><br />
+	</td>
+      </tr>
+
+      <tr>
+	<td>
+	  <%= f.label :email, 'EMAIL' %>
+	</td>
+	<td>	
+	  <%= f.text_field :email, :size => 23 %><font color="red">*</font><br />
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= link_to image_tag("butonLogin-6.png", alt: "Login"),{:action => 'login', :controller => 'users'}, {:class => 'dock-item'} %>
+	</td>
+	<td>
+	  <%= image_submit_tag('butonRegister-3.png') %>
+  	</td>
+      </tr>
+      <tr>
+	<td>
+	</td>
+	<td>
+	  <!-- <%=@error%>  -->
+	</td>
+      </tr>
+    </table>
+        <% if flash[:error] %>
+          <p id="error"><%= flash[:error] %></p>
+        <% end %>
+        <% if flash[:notice] %>
+          <p id="notice"><%= flash[:notice] %></p>
+        <% end %>
+  </div>
+
+<% end %>
+
+
