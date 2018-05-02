@@ -4,13 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projits</title>
 <style>
-body {font-family: Helvetica; font-size:12pt;}
+body {font-family: Calibri; font-size:12pt;}
 
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #24a;
+    #border: 1px solid #ccc;
+    background-color: #fff;
     margin-left: 105px;
     width: 1255px;
 }
@@ -25,17 +25,17 @@ body {font-family: Helvetica; font-size:12pt;}
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-    color: #ccc;	
+    color: #344;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #38a;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #68c;
+    background-color: #38a;
 }
 
 /* Style the tab content */
@@ -63,6 +63,30 @@ body {font-family: Helvetica; font-size:12pt;}
 
 #bottomPane {
     margin-left: 105px;
+}
+
+#rightDiv {
+    #background-color: #eff;
+    margin-left: 560px;
+    border: 0px solid black;
+    text-align: center;
+    font-family: Chalkboard;
+    font-size: 8pt;
+}
+
+#leftDiv {
+    top: 5px;
+    width: 540px;
+    margin-left: 0px;
+    margin-top: -710px;
+    word-wrap: break-word;
+    border: 0px solid black;
+}
+
+#caption {
+    font-family: Chalkboard;
+    font-size: 8pt;
+    text-align: right;
 }
 
 .contentsTableHead tr {
@@ -105,12 +129,20 @@ body {font-family: Helvetica; font-size:12pt;}
   <!-- Tab content -->
   <div id="About" class="tabcontent">
     <h3>ABOUT</h3>
-    <p>Projits Solutions Private Limited is an exciting Tech venture which aims to "IT-vate", "IT-fy", or in plain old English, incorporate Technological solutions into different industries and organizations. We offer end-to-end project implementation, inclusive of <b>Survey, Analysis, Scoping, Planning, Modelling, Designing, Implementation, Testing, Deployment, Delivery, Integration and Support</b> of the Projit. Browse a list of our Projits in the Projits tab.</p>
+    <div id="rightDiv">
+        <img src="ProjitUML.png"><br /><p class="caption">Projits UML Modeling Examples.</p><br /><br /><br />
+	<img src="SG.png"><br /><p class="caption">Projit # 1: Studygroops. Login page of <a href="https://www.studygroops.com">studygroops.com</a></p>
+	<!-- <img src="SG-3.png"><br /><I>My Groups tab of Studygroops web platform</I> -->
+	<!-- <img src="SG-4.png"><br /> -->
+    </div> 
+    <div id="leftDiv">
+    <p>Projits Solutions Private Limited is an exciting Tech venture which delivers Projects of IT, <I>termed</I><b> Projits</b>, for different industries and organizations. Offering end-to-end project implementation, inclusive of <b>Survey, Analysis, Scoping, Planning, Modelling, Designing, Implementation, Testing, Deployment, Delivery, Integration and Support</b> of the Projit, Projits Solutions has already launched the web platform for Free Social Education for the Education industry, Studygroops. Browse a list of our Projits in the Projits tab.</p>
     <h3>CONCEPT</h3>
       <p>The concept behind Projits Solutions is simple. It identifies a unit of IT work as a ProjIT, which is just a way of saying "IT Project" or "Project of IT". A Projit is defined here as a task or collective tasks which result in an output of a deliverable. It can be small, for example, writing a simple Program to produce a game. Or it can be a bigger task, such as building a customized web application for a company, for example, <a href="https://www.studygroops.com">Studygroops.com</a>. Projit Solutions offers complete end-to-end management and delivery of IT related projects for all industries.</p>
     <h3>VISION</h3>
       <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. An example showcase is the Projit for the Education industry, <a href="https://www.studygroops.com">StudyGroops</a> (please refer to the PROJITS tab for more info).<br /><br />The StudyGroops application was formed from a simple use case requirement specification: the goal of the application. Projits Solutions welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
   </div>
+</div>
 
   <div id="Projits" class="tabcontent">
     <h3>PROJITS</h3>
@@ -142,8 +174,8 @@ body {font-family: Helvetica; font-size:12pt;}
       <tr>
         <td><a href="https://www.projits.com">Projits.com</a></td>
         <td>Website</td>
-        <td>The Projit to implement the Projits.com website was accomplished in a short timeframe. Version 1 of the projits.com website is composed of HTML, CSS, and Javascript, hosted on a Linux VPS with CentOS and served by Nginx. Version 2 will incorporate Ruby on Rails.</td>
-        <td><li>Cloud Linux VPS with CentOS 6.4</li>
+        <td>The Projit to implement the Projits.com website was accomplished in a short timeframe. Version 1 of the projits.com website is composed of HTML, CSS, and Javascript, hosted on a Linux (CentOS) VPS and served by Nginx. Version 2 will incorporate Ruby on Rails.</td>
+        <td><li>Cloud Linux VPS - CentOS 6.4</li>
 	    <li type="square">HTML</li>
 	    <li type="square">NGINX</li>
   	    <li type="square">CSS</li> 
@@ -160,7 +192,7 @@ body {font-family: Helvetica; font-size:12pt;}
 	  <li type="square">Nginx</li>
 	  <li type="square">Mutt</li></td>
         <td>
-	  <li type="square">Cloud Linux VPS with CentOS 6.4</li> 
+	  <li type="square">Cloud Linux VPS - CentOS 6.4</li> 
 	  <li type="square">Postfix</li> 
 	  <li type="square">Dovecot</li>
 	  <li type="square">Ruby version 2.4.2</li>
