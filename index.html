@@ -11,8 +11,9 @@ body {font-family: Calibri; font-size:12pt;}
     overflow: hidden;
     #border: 1px solid #ccc;
     background-color: #fff;
-    margin-left: 105px;
+    margin-left: 65px;
     width: 1255px;
+    margin-top: 5px;
 }
 
 /* Style the buttons inside the tab */
@@ -45,7 +46,7 @@ body {font-family: Calibri; font-size:12pt;}
     padding: 6px 12px;
     border: 0px solid #ccc;
     border-top: none;
-    margin-left: 105px;
+    margin-left: 70px;
     width: 1231px;
     text-align: justify;
 }
@@ -56,13 +57,14 @@ body {font-family: Calibri; font-size:12pt;}
 }
 
 #topPane {
+    padding: 20px;
     #top: -20px;
     margin-top: -50px;
     border: 0px solid black;
 }
 
 #bottomPane {
-    margin-left: 105px;
+    margin-left: 65px;
 }
 
 #rightDiv {
@@ -72,6 +74,7 @@ body {font-family: Calibri; font-size:12pt;}
     text-align: center;
     font-family: Chalkboard;
     font-size: 8pt;
+    align=: right;
 }
 
 #leftDiv {
@@ -110,9 +113,18 @@ body {font-family: Calibri; font-size:12pt;}
 <body>
   <br /><br />
   <div id="topPane">
-    <img src="PS-Banner-14.png">
-<!--  </div>  -->
+    <table>
+      <tr>
+	<td>      
+    	  <img src="PS-Banner-15.png">
+        </td>
+        <td>
+	</td>
+      </tr>
+    </table>	
+  </div>
 
+  <div>
 
   <!-- Tab links -->
   <div class="tab">
@@ -130,7 +142,7 @@ body {font-family: Calibri; font-size:12pt;}
   <div id="About" class="tabcontent">
     <h3>ABOUT</h3>
     <div id="rightDiv">
-        <img src="ProjitUML.png"><br /><p class="caption">Projits UML Modeling.</p><br /><br /><br />
+        <img src="ProjitUML-2.png"><p class="caption">Projits UML Model</p><br /><br /><br />
 	<img src="SG.png"><br /><p class="caption">Projit # 1: Studygroops. Login page of <a href="https://www.studygroops.com">studygroops.com</a></p>
 	<!-- <img src="SG-3.png"><br /><I>My Groups tab of Studygroops web platform</I> -->
 	<!-- <img src="SG-4.png"><br /> -->
@@ -147,18 +159,26 @@ body {font-family: Calibri; font-size:12pt;}
   <div id="Projits" class="tabcontent">
     <h3>PROJITS</h3>
     <p>Following are the list of completed Projits designed and implemented by Projits Solutions Private Limited.</p>
+<p>1. Studygroops</p>
+    <img src="SG.png"><br /><br />
+    <img src="SG-4.png"><br /><br />
+<p>2. Projits</p>
+    <img src="projits-1.png"><br /><br />
+    <img src="projits-2.png"><br /><br />
+  
+
     <table class="contentsTable">
       <tr style="background-color:#335;color:white;">
 	<td width="18%">PROJIT NAME</td>
 	<td width="12%">PROJIT TYPE</td>
 	<td width="50%">PROJIT DESCRIPTION</td>
-	<td width="20%">TECHNOLOGIES</td>
+	<td width="20%">TECHNOLOGIES</td><br />
       </tr>
 
       <tr>
         <td><a href="https://www.studygroops.com">StudyGroops.com</a></td>
         <td>Web Application</td>
-        <td>Conceptualized, designed and implemented the web application platform to form, study and work in groups in an effort to enable people to contribute positively to the community and society. The project introduces a different approach to self-education, promoting collaboration and teamwork.<br /><br />Coded in Ruby on Rails, the web application allows users to view a list of groups and join groups of their interest in their choice of location. It also allows users to create and setup group learning Activities and associated Tasks.</td>
+        <td>Conceptualized, designed and implemented the web application platform to form, study and work in groups in an effort to enable people to contribute positively to the community and society. The project introduces a different approach to self-education, combining .<br /><br />Coded in Ruby on Rails, the web application allows users to view a list of groups and join groups of their interest in their choice of location. It also allows users to create and setup group learning Activities and associated Tasks.</td>
         <td>
 	  <li type="square">Cloud Linux VPS - CentOS 6.4</li>
 	  <li type="square">Ruby version 2.4.2</li> 
@@ -230,7 +250,18 @@ body {font-family: Calibri; font-size:12pt;}
 
   <div id="Projits In The Works" class="tabcontent">
     <h3>PROJITS IN THE WORKS</h3><br />
-    <p>Projits in the works includes:</p><br />
+    <p><b>1. Financial Web App</b></p><br />
+    <table>
+      <tr>
+        <td>
+          <img src="FinGoals-1.png"></img><br /><br />
+	</td>
+	<td><br />&emsp;&emsp;&emsp;&emsp;
+            <img src="FinGoals-2.png"><p class="caption">TraceMe - Financial Goals App</p></img><br /><br />
+	</td>
+      </tr>
+    </table>
+
     <table class="contentsTable">
       <tr style="background-color:#335;color:white;">
         <td width="15%">PROJIT NAME</td>
@@ -244,9 +275,10 @@ body {font-family: Calibri; font-size:12pt;}
         <td>Financial Web Application</td>
         <td>Revamping the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.<br /><br />The original was developed in Rails 1.x, however it required more work and resources and was taken offline. The newer version is expected to launch later in 2018.</td>
         <td>
-          <li type="square">Developed on the Mac OSX platform</li>
+          <li type="square">Developed on Mac OSX</li>
           <li type="square">Ruby version 2.4.2</li>
           <li type="square">Rails version 4.2.10</li>
+	  <li type="square">D3.js</li>
           <li type="square">MySQL</li>
           <li type="square">NGINX</li>
           <li type="square">Phusion Passenger</li>
@@ -287,7 +319,7 @@ body {font-family: Calibri; font-size:12pt;}
 
   <div id="Contact Us" class="tabcontent">
     <h3>CONTACT US</h3>
-    <p>If you have a business requirement, project request, or queries related to our work and services, please reach out to us on the details listed below.</p><br />
+    <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p><br />
     <ul><b>Projits Info</b></ul>
     <ul>Mobile: +92 3355684554</ul>
     <ul>Email: support@projits.com</ul>
@@ -295,7 +327,7 @@ body {font-family: Calibri; font-size:12pt;}
 
   <div id="Careers" class="tabcontent">
     <h3>CAREERS</h3>
-    <p>Projits Solutions Pvt Ltd is a promising startup which aims to service not one but ALL the industries in the world.<br /><br />We have only just begun, and expect our company to grow through our sheer persistence in the delivery of quality Projits to different industries and disciplines all over the world.<br /><br />At Projits Solutions, we welcome the opportunity to find placements for applicants suited to their skills and goals.<br /><br />We currently do not have any positions but please revisit our Careers page regularly for new opportunities.</p><br />
+    <p>Projits Solutions Pvt Ltd is a promising startup which aims to service not one but ALL the industries in the world.<br /><br />We expect our company to grow through our sheer persistence in the delivery of quality Projits to different industries and disciplines all over the world.<br /><br />At Projits Solutions, we welcome the opportunity to find placements for applicants suited to their skills and goals.<br /><br />This section is currently under development, however please revisit our Careers page regularly for new opportunities.</p><br />
   </div>
 
   <div id="bottomPane">
