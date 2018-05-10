@@ -2,9 +2,16 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projits</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cairo">
+  <title>Projits Solutions</title>
 <style>
-body {font-family: Calibri; font-size:12pt;}
+
+@font-face {
+    font-family: 'Cairo';
+    src: url(cairo.woff);
+}
+
+body {font-family: 'cairo'; font-size:12pt;}
 
 /* Style the tab */
 .tab {
@@ -26,7 +33,7 @@ body {font-family: Calibri; font-size:12pt;}
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-    color: #344;
+    color: #9C6;
 }
 
 /* Change background color of buttons on hover */
@@ -36,7 +43,7 @@ body {font-family: Calibri; font-size:12pt;}
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #38a;
+    background-color: #05386B;
 }
 
 /* Style the tab content */
@@ -64,32 +71,63 @@ body {font-family: Calibri; font-size:12pt;}
 }
 
 #bottomPane {
-    margin-left: 65px;
+    margin-left: 85px;
+    #margin-bottom: 5%;
+    bottom: 5%;
 }
 
 #rightDiv {
     #background-color: #eff;
-    margin-left: 560px;
+    left: 700px;
+    top: 340px;
+    width: 570px;
     border: 0px solid black;
-    text-align: center;
-    font-family: Chalkboard;
-    font-size: 8pt;
-    align=: right;
+    text-align: justify;
+    position: absolute;
+    word-wrap: break-word;
+    #font-family: Chalkboard;
+    #font-size: 8pt;
+    align: right;
 }
 
 #leftDiv {
-    top: 5px;
+    top: 400px;
+    left: 90px;
+    position: absolute;
     width: 540px;
+    #margin-left: 0px;
+    #margin-top: -710px;
+    word-wrap: break-word;
+    border: 0px solid black;
+    #font-family: Tangerine;	
+}
+
+
+.rightPane {
+    background-color: #eff;
+    top: 420px;
+    left: 400px;
+    position: absolute;
+    border: 0px solid black;
+    text-align: justify;
+    #font-family: Chalkboard;
+    font-size: 8pt;
+    align: right;
+}
+
+.leftPane {
+    top: 285px;
+    width: 240px;
     margin-left: 0px;
-    margin-top: -710px;
+    #margin-top: -710px;
     word-wrap: break-word;
     border: 0px solid black;
 }
 
-#caption {
-    font-family: Chalkboard;
+.caption {
+    font-family: Cairo;
     font-size: 8pt;
-    text-align: right;
+    text-align: center;
 }
 
 .contentsTableHead tr {
@@ -116,15 +154,14 @@ body {font-family: Calibri; font-size:12pt;}
     <table>
       <tr>
 	<td>      
-    	  <img src="PS-Banner-15.png">
+    	  <img src="PS-Banner-18.png">
         </td>
-        <td>
+        <td style="background-color:#05386B;width:450px;color:white;text-align:center;">
+	  <h3>PROJITS : Quantified IT Project Solutions.</h3>
 	</td>
       </tr>
     </table>	
   </div>
-
-  <div>
 
   <!-- Tab links -->
   <div class="tab">
@@ -139,32 +176,37 @@ body {font-family: Calibri; font-size:12pt;}
   </div>
 
   <!-- Tab content -->
-  <div id="About" class="tabcontent">
+  <div id="About" class="tabcontent" style="height:800px;">
     <h3>ABOUT</h3>
     <div id="rightDiv">
-        <img src="ProjitUML-2.png"><p class="caption">Projits UML Model</p><br /><br /><br />
-	<img src="SG.png"><br /><p class="caption">Projit # 1: Studygroops. Login page of <a href="https://www.studygroops.com">studygroops.com</a></p>
-	<!-- <img src="SG-3.png"><br /><I>My Groups tab of Studygroops web platform</I> -->
-	<!-- <img src="SG-4.png"><br /> -->
-    </div> 
-    <div id="leftDiv">
-    <p>Projits Solutions Private Limited is an exciting Tech venture which delivers Projects of IT, <I>termed</I><b> Projits</b>, for different industries and organizations. Offering end-to-end project implementation, inclusive of <b>Survey, Analysis, Scoping, Planning, Modelling, Designing, Implementation, Testing, Deployment, Delivery, Integration and Support</b> of the Projit, Projits Solutions has already launched the web platform for Free Social Education for the Education industry, Studygroops. Browse a list of our Projits in the Projits tab.</p>
     <h3>CONCEPT</h3>
       <p>The concept behind Projits Solutions is simple. It identifies a unit of IT work as a ProjIT, which is just a way of saying "IT Project" or "Project of IT". A Projit is defined here as a task or collective tasks which result in an output of a deliverable. It can be small, for example, writing a simple Program to produce a game. Or it can be a bigger task, such as building a customized web application for a company, for example, <a href="https://www.studygroops.com">Studygroops.com</a>. Projit Solutions offers complete end-to-end management and delivery of IT related projects for all industries.</p>
+	<img src="ProjitUML-2.png" style="width:570px;"><br />
+ <p class="caption">UML Modeling of a Projit</p>
+
+<p>The StudyGroops application was formed from a simple use case requirement specification: the goal of the application. Projits Solutions welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
+
+
+    </div> 
+    <div id="leftDiv">
+    <p>Projits Solutions Private Limited is an exciting Tech venture which delivers Projects of IT, <I>termed</I><b> Projits</b>, for different industries and organizations. Offering end-to-end project implementation, inclusive of <b>Survey, Analysis, Scoping, Planning, Modelling, Designing, Implementation, Testing, Deployment, Delivery, Integration and Support</b> of the Projit, Projits Solutions has already launched the web platform for Free Social Education for the Education industry, Studygroops.</p>
+ <img src="SG.png" style="width:540px;"></img><br />
+ <p class="caption">The <a href="https://www.studygroops.com">Study Groops</a> web application/platform for the Education industry</p>
     <h3>VISION</h3>
-      <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. An example showcase is the Projit for the Education industry, <a href="https://www.studygroops.com">StudyGroops</a> (please refer to the PROJITS tab for more info).<br /><br />The StudyGroops application was formed from a simple use case requirement specification: the goal of the application. Projits Solutions welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
+      <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. An example showcase is the Projit for the Education industry, <a href="https://www.studygroops.com">StudyGroops.com</a>.
   </div>
 </div>
 
-  <div id="Projits" class="tabcontent">
+  <div id="Projits" class="tabcontent" style="word-wrap:break-word;">
     <h3>PROJITS</h3>
-    <p>Following are the list of completed Projits designed and implemented by Projits Solutions Private Limited.</p>
-<p>1. Studygroops</p>
-    <img src="SG.png"><br /><br />
-    <img src="SG-4.png"><br /><br />
-<p>2. Projits</p>
-    <img src="projits-1.png"><br /><br />
-    <img src="projits-2.png"><br /><br />
+    <p>1. <a href="https://www.studygroops.com">Studygroops</a></p>
+    <p>Conceptualized, designed and implemented the web application/platform to form, study and work in groups to encourage and facilitate education.<br />The project introduces a different approach to self-education, combining social networking and activity-based group learning.</p>
+    <img src="SG.png" style="width:570px;">&emsp;&emsp;
+    <img src="SG-4.png" style="width:570px;"><br /><br />
+    <p>2. <a href="https://www.projits.com">Projits</a></p>
+    <p>The Projit to implement the Projits.com website was accomplished in a short timeframe. <br />Version 1 of the projits.com website is composed of HTML, CSS, and Javascript, hosted on a Linux (CentOS) VPS and served by Nginx.</p>
+    <img src="projits-1.png" style="width:570px;">&emsp;&emsp;
+    <img src="projits-2.png" style="width:570px;"><br /><br />
   
 
     <table class="contentsTable">
@@ -249,18 +291,11 @@ body {font-family: Calibri; font-size:12pt;}
   </div>
 
   <div id="Projits In The Works" class="tabcontent">
-    <h3>PROJITS IN THE WORKS</h3><br />
-    <p><b>1. Financial Web App</b></p><br />
-    <table>
-      <tr>
-        <td>
-          <img src="FinGoals-1.png"></img><br /><br />
-	</td>
-	<td><br />&emsp;&emsp;&emsp;&emsp;
-            <img src="FinGoals-2.png"><p class="caption">TraceMe - Financial Goals App</p></img><br /><br />
-	</td>
-      </tr>
-    </table>
+    <h3>PROJITS IN THE WORKS</h3>
+    <p><b>Financial Web App</b></p>
+    <p>Revamping the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.</p>
+      <img src="FinGoals-1.png" style="width:570px;">&emsp;&emsp;
+      <img src="FinGoals-2.png" style="width:620px;height:320px;"><p class="caption">TraceMe - Financial Goals App</p>
 
     <table class="contentsTable">
       <tr style="background-color:#335;color:white;">
@@ -308,8 +343,8 @@ body {font-family: Calibri; font-size:12pt;}
     <h3>I HAVE A PROJIT</h3>
     <p>Have a Projit in mind? We can help you.</p>
     <p>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please reach out to us for a free consultation at:</p>
-    <ul>Mobile: +92 3355684554</ul>
-    <ul>Email: support@projits.com</ul>
+    Mobile: +92 3355684554<br />
+    Email: support@projits.com
   </div>
 
   <div id="Links" class="tabcontent">
@@ -319,10 +354,12 @@ body {font-family: Calibri; font-size:12pt;}
 
   <div id="Contact Us" class="tabcontent">
     <h3>CONTACT US</h3>
-    <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p><br />
-    <ul><b>Projits Info</b></ul>
-    <ul>Mobile: +92 3355684554</ul>
-    <ul>Email: support@projits.com</ul>
+    <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p>
+    <div class="leftPane">
+      <p>Mohammad Jassim - Founder | CEO<br />Projits Solutions Private Limited<br />
+      Mobile: +92 3355684554<br />
+      <b>Email: support@projits.com</b><br /></p>
+    </div>
   </div>
 
   <div id="Careers" class="tabcontent">
@@ -330,10 +367,10 @@ body {font-family: Calibri; font-size:12pt;}
     <p>Projits Solutions Pvt Ltd is a promising startup which aims to service not one but ALL the industries in the world.<br /><br />We expect our company to grow through our sheer persistence in the delivery of quality Projits to different industries and disciplines all over the world.<br /><br />At Projits Solutions, we welcome the opportunity to find placements for applicants suited to their skills and goals.<br /><br />This section is currently under development, however please revisit our Careers page regularly for new opportunities.</p><br />
   </div>
 
+
   <div id="bottomPane">
     <p class="faded">Copyright &copy; 2018 by Projits Solutions Pvt Ltd. All Rights Reserved.
   </div>
-</div>
 
 <script>
 document.getElementById("defaultOpen").click();
