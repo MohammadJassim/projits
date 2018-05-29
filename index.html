@@ -33,7 +33,7 @@ body {font-family: 'cairo'; font-size:12pt;}
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 16px 20px;
+    padding: 14px 18px;
     transition: 0.3s;
     font-size: 17px;
     #color: #9C6;
@@ -156,15 +156,21 @@ body {font-family: 'cairo'; font-size:12pt;}
 }
 
 .rightPane {
-    background-color: #fff;
-    top: 400px;
-    left: 400px;
+    #background-color: #79B;
+    top: 395px;
+    left: 600px;
     position: absolute;
-    border: 0px solid black;
+    padding: 1px;
+    border: 1px solid black;
     text-align: justify;
     #font-family: Chalkboard;
-    font-size: 8pt;
+    font-size: 10pt;
     align: right;
+    color: #789;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: 1px solid gray;
 }
 
 .leftPane {
@@ -210,7 +216,7 @@ body {font-family: 'cairo'; font-size:12pt;}
 	<table class="promoTable">
 	 <tr>
 	  <td>
-	    <li type="square">Full-stack Software Development Projects</li>
+	    <li type="square">Fullstack Software Development Projects</li>
 	  </td>
 	 </tr>
          <tr>
@@ -424,10 +430,50 @@ body {font-family: 'cairo'; font-size:12pt;}
     <h3>CONTACT US</h3>
     <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p>
     <div class="leftPane">
-      <p>Mohammad Jassim - Founder | CEO<br />Projits Solutions Private Limited<br />
-      Mobile: +92 3355684554<br />
-      <b>Email: support@projits.com</b><br /></p>
+    <?php
+    if (isset($_REQUEST['email']))  {
+  
+  $admin_email = "support@projits.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['subject'];
+  $comment = $_REQUEST['comment'];
+  
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  echo "Thank you for contacting us!";
+  }
+  
+  else  {
+?>
+
+ <form method="post">
+    <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
+    <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
+    <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
+  	<input type="submit" value="Submit" />
+
+  </form>
+  
+<?php
+  }
+?>
     </div>
+
+    <div class="rightPane">
+     <div style="border:1px solid gray;border-bottom-style:1px solid gray;border-top-style:none;border-right-style:none;border-left-style:none;">
+      <h3 style="text-decoration:underline;">PAKISTAN OFFICE</h3>
+      <p>Projits Solutions Private Limited<br />
+      F-11/2, Islamabad, Pakistan<br />
+      Phone (Cell): +92 3355684554<br />
+      Email: support@projits.com<br /><br /></p>
+     </div>
+      <h3 style="text-decoration:underline;">AUSTRALIA OFFICE</h3>
+      <p>Projits Solutions Private Limited<br />
+      TBA <br />
+      Email: support@projits.com<br /><br /></p>
+
+    </div>
+
   </div>
 
   <div id="Careers" class="tabcontent">
