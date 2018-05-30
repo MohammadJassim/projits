@@ -438,13 +438,13 @@ body {font-family: 'cairo'; font-size:12pt;}
   $subject = $_REQUEST['subject'];
   $comment = $_REQUEST['comment'];
  
-  $headers  = 'From:' .$email. "\r\n" .
-              'Reply-To: info@domain.com' . "\r\n" .
+  $headers  = 'From:' . $email . "\r\n" .
+              'Reply-To: support@projits.com' . "\r\n" .
               'MIME-Version: 1.0' . "\r\n" .
               'Content-type: text/html; charset=iso-   8859-1' . "\r\n" .
               'X-Mailer: PHP/' . phpversion();
  
-  mail($admin_email, "$subject", $comment, $headers);
+  mail($admin_email, $subject, $comment, $headers);
   
   echo "Thank you for contacting us!";
   }
