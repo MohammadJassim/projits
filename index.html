@@ -437,8 +437,14 @@ body {font-family: 'cairo'; font-size:12pt;}
   $email = $_REQUEST['email'];
   $subject = $_REQUEST['subject'];
   $comment = $_REQUEST['comment'];
-  
-  mail($admin_email, "$subject", $comment, "From:" . $email);
+ 
+  $headers  = 'From:' .$email. "\r\n" .
+              'Reply-To: info@domain.com' . "\r\n" .
+              'MIME-Version: 1.0' . "\r\n" .
+              'Content-type: text/html; charset=iso-   8859-1' . "\r\n" .
+              'X-Mailer: PHP/' . phpversion();
+ 
+  mail($admin_email, "$subject", $comment, $headers);
   
   echo "Thank you for contacting us!";
   }
