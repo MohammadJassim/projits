@@ -239,19 +239,17 @@ body {font-family: 'cairo'; font-size:12pt;}
 	 </tr>
 	</table>
    </div>
-
   <!-- Tab links -->
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">ABOUT</button>
     <button class="tablinks" onclick="openTab(event, 'Projits')">PROJITS</button>
     <button class="tablinks" onclick="openTab(event, 'Projits In The Works')">PROJITS IN THE WORKS</button>
     <button class="tablinks" onclick="openTab(event, 'Links')">PROJITS LINKS</button>
-    <button class="tablinks" onclick="openTab(event, 'BoardOfDirectors')">BOARD OF DIRECTORS</button>
-    <button class="tablinks" onclick="openTab(event, 'IHaveAProjit')">I HAVE A PROJIT</button>
+    <button class="tablinks" onclick="openTab(event, 'Technologies')">TECHNOLOGIES</button>
+    <button class="tablinks" onclick="openTab(event, 'RequestAProjit')">REQUEST A PROJIT</button>
     <!-- <button class="tablinks" onclick="openTab(event, 'Careers')">CAREERS</button> -->
     <button class="tablinks" onclick="openTab(event, 'Contact Us')">CONTACT US</button>
   </div>
-
   <!-- Tab content -->
   <div id="About" class="tabcontent" style="height:800px;">
     <h3>ABOUT</h3>
@@ -401,20 +399,48 @@ body {font-family: 'cairo'; font-size:12pt;}
     <p><b>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please reach out to us for a free consultation on the contact info detailed in the Contact Us tab.</b></p> 
   </div>
 
-  <div id="BoardOfDirectors" class="tabcontent">
-    <h3>BOARD OF DIRECTORS</h3>
-    <b>Mr. Mohammad Jassim</b><br />
-    Founder & Chief Executive Officer<br /><br />
-
-    <b>Mr. Ali Jassim</b><br />
-    Director<br /><br />
-
-    <b>Mr. Jaffar Jassim</b><br />
-    Director
+  <div id="Technologies" class="tabcontent">
+    <h3>Technologies</h3>
+    <div><h4 style="background-color:#456;color:#fff;">Web Development</h4><br />
+      <span>
+        <img src="ror1.png" alt="Ruby on Rails">
+        <img src="php.png" alt="PHP">
+        <img src="javascript.png" alt="Javascript">
+        <img src="html.png" alt="HTML">
+	<img src="css.png" alt="CSS">
+	<br /><br />
+      </span>
+    </div>
+    <div>
+    <h4 style="background-color:#456;color:#fff;">Software Development</h4><br />
+      <span>
+        <img src="c.png" alt="C">
+        <img src="cpp.png" alt="C++">
+        <img src="java1.png" alt="Java">
+        <img src="csharp.png" alt="C#">
+	<img src="excelvba1.png" alt="Excel VBA">
+	<img src="python.png" alt="Python">
+        <br /><br />
+      </span>
+      <br /><br />
+    </div>
+    <div>
+    <h4 style="background-color:#456;color:#fff;">Databases</h4><br />
+      <picture>
+        <img src="sql.png" alt="sql">
+        <img src="mysql.png" alt="MySQL">
+        <img src="sybase.png" alt="Sybase">
+        <img src="oracle.png" alt="Oracle">    
+        <br /><br />
+      </picture>
+      <br /><br />
+    </div>
+    <h4 style="background-color:#456;color:#fff;">Frameworks and Tools</h4><br />
+        <img src="rails.png" alt="Rails"> 
   </div>
 
-  <div id="IHaveAProjit" class="tabcontent">
-    <h3>I HAVE A PROJIT</h3>
+  <div id="RequestAProjit" class="tabcontent">
+    <h3>REQUEST A PROJIT</h3>
     <p>Have a Projit in mind? We can help you.</p>
     <p>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please reach out to us for a free consultation at:</p>
     Mobile: +92 3355684554<br />
@@ -430,52 +456,53 @@ body {font-family: 'cairo'; font-size:12pt;}
     <h3>CONTACT US</h3>
     <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p>
     <div class="leftPane">
+
+    <form method="post">
+      <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
+      <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
+      <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
+      <input type="submit" value="Submit" />
+
+    </form>
+
+
     <?php
-    if (isset($_REQUEST['email']))  {
+      if (isset($_POST['email']))  {
   
-  $admin_email = "support@projits.com";
-  $email = $_REQUEST['email'];
-  $subject = $_REQUEST['subject'];
-  $comment = $_REQUEST['comment'];
+  	$admin_email = "support@projits.com";
+  	$email = $_POST['email'];
+  	$subject = $_POST['subject'];
+  	$comment = $_POST['comment'];
  
-  $headers  = 'From:' . $email . "\r\n" .
+  	$headers  = 'From:' . $email . "\r\n" .
               'Reply-To: support@projits.com' . "\r\n" .
               'MIME-Version: 1.0' . "\r\n" .
               'Content-type: text/html; charset=UTF-8' . "\r\n"
  
-  mail($admin_email, $subject, $comment, $headers);
+  	mail($admin_email, $subject, $comment, $headers);
   
-  echo "Thank you for contacting us!";
-  }
+  	echo "Thank you for contacting us!";
+      }
   
-  else  {
-?>
-
- <form method="post">
-    <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
-    <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
-    <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
-  	<input type="submit" value="Submit" />
-
-  </form>
-  
-<?php
-  }
-?>
+      else  {
+      }
+    ?>
     </div>
 
     <div class="rightPane">
      <div style="border:1px solid gray;border-bottom-style:1px solid gray;border-top-style:none;border-right-style:none;border-left-style:none;">
       <h3 style="text-decoration:underline;">PAKISTAN OFFICE</h3>
-      <p>Projits Solutions Private Limited<br />
+      <address>Projits Solutions (Private) Limited<br />
       F-11/2, Islamabad, Pakistan<br />
       Phone (Cell): +92 3355684554<br />
-      Email: support@projits.com<br /><br /></p>
+      Email: support@projits.com<br /><br />
+      </address>
      </div>
       <h3 style="text-decoration:underline;">AUSTRALIA OFFICE</h3>
-      <p>Projits Solutions Private Limited<br />
+      <address>Projits Solutions (Private) Limited<br />
       TBA <br />
-      Email: support@projits.com<br /><br /></p>
+      Email: support@projits.com<br /><br />
+      </address>
 
     </div>
 
