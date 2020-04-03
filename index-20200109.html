@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cairo">
+  <title>Projits Solutions</title>
+<style>
+
+@font-face {
+    font-family: 'Cairo';
+    src: url(cairo.woff);
+}
+
+body {font-family: 'cairo'; font-size:12pt;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    #border: 1px solid #ccc;
+    background-color: #8C8;
+    #background-color: #5A0;
+    margin-left: 90px;
+    width: 1180px;
+    margin-top: 170px;
+    font-family: 'cario';
+    #top: 200px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    transition: 0.3s;
+    font-size: 17px;
+    #color: #9C6;
+    color: blue;
+    font-family: 'cario';
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #38a;
+    #text-decoration: underline;
+    border: 4px solid blue;
+    
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    #background-color: #05386B;
+    background-color: #48a;
+    #text-decoration: underline;
+    border: 4px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    animation: fadeEffect 1s;
+    #display: none;
+    padding: 6px 12px;
+    border: 0px solid #ccc;
+    border-top: none;
+    margin-left: 80px;
+    width: 1180px;
+    text-align: justify;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#topPane {
+    padding: 0px;
+    position: absolute;
+    left: 100px;
+    #top: -20px;
+    margin-top: -50px;
+    border: 0px solid black;
+}
+
+.innerFirst {
+    padding: 5px;
+    position: absolute;
+    top: 19px;
+    left: 950px;
+    border: 1px solid black;
+    #background-color: #22264b;
+    height: 192px;
+    width: 317px;
+    color: #000;
+    #line-height: 204px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.promoTable {
+    width: 100%;
+    text-align: left;
+    border: 0px solid gray;
+}
+
+.promoTable td {
+    padding: 5px;
+    border: 1px solid gray;
+    border-bottom-style: 1px solid gray;
+    border-right-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    #color: #ffA;
+    color: #334;
+}
+
+#bottomPane {
+    margin-left: 90px;
+    #margin-bottom: 5%;
+    bottom: 5%;
+}
+
+#rightDiv {
+    #background-color: #40c4ff;
+    left: 700px;
+    top: 290px;
+    width: 580px;
+    border: 0px solid black;
+    text-align: justify;
+    position: absolute;
+    word-wrap: break-word;
+    #font-family: Chalkboard;
+    #font-size: 8pt;
+    padding: 2px;
+    #border: 1px solid black;
+    #border-radius: 5%;
+    align: right;
+}
+
+#leftDiv {
+    #border: 1px solid blue;
+    #border-radius: 2%;
+    padding: 2px;
+    top: 350px;
+    left: 100px;
+    position: absolute;
+    width: 580px;
+    word-wrap: break-word;
+    border: 0px solid black;
+    #background-color: #0386B5;
+    #background-color: #69A;
+    #background-color: #c2dde6;
+    #color: #fff;
+    #font-family: Tangerine;	
+}
+
+.rightPane {
+    #background-color: #79B;
+    top: 395px;
+    left: 600px;
+    position: absolute;
+    padding: 1px;
+    border: 1px solid black;
+    text-align: justify;
+    #font-family: Chalkboard;
+    font-size: 10pt;
+    align: right;
+    color: #789;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: 1px solid gray;
+}
+
+.leftPane {
+    top: 285px;
+    width: 240px;
+    margin-left: 0px;
+    #margin-top: -710px;
+    word-wrap: break-word;
+    border: 0px solid black;
+}
+
+.caption {
+    font-family: Cairo;
+    font-size: 8pt;
+    text-align: center;
+}
+
+.contentsTableHead tr {
+    border-bottom-style: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+.contentsTable td {
+    padding:6px;
+    vertical-align:top;
+}
+
+.faded {
+  color: #999;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <br /><br />
+  <div id="topPane">
+     <img src="PS-Banner-26.png">
+  </div>
+   <div id="promo" class="innerFirst">
+	<table class="promoTable">
+	 <tr>
+	  <td>
+	    <li type="square">Fullstack Software Development Projects</li>
+	  </td>
+	 </tr>
+         <tr>
+          <td>  
+ 	    <li type="square">Web Design & Development Projects</li>
+          </td>
+         </tr>
+         <tr>
+          <td>
+	    <li type="square">IT Integration & Setup Projects</li>
+	  </td>
+	 </tr>
+         <tr>
+         <!-- <td style="text-align:center;align:middle;border-bottom-style:none;">  -->
+	  <td style="text-align:left;border-bottom-style:none;"> {{ message }}
+	   <!-- <li type="square">Pro-jIT-Chat&emsp; -->
+	    <!-- <button class="tablinks" onclick="openTab(event, 'Contact Us')">CONTACT US</button> -->
+	    <img src="contactus-3.png" onclick="openTab(event, 'Contact Us')"></img></li>
+	  </td>
+	 </tr>
+	</table>
+   </div>
+
+     var app = new Vue({
+     e1: '#promo',
+     data: {
+       message: 'Hello Vue!'
+       }
+     })
+
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">ABOUT</button>
+    <button class="tablinks" onclick="openTab(event, 'Projits')">PROJITS</button>
+    <button class="tablinks" onclick="openTab(event, 'Projits In The Works')">PROJITS IN THE WORKS</button>
+    <button class="tablinks" onclick="openTab(event, 'Links')">PROJITS LINKS</button>
+    <button class="tablinks" onclick="openTab(event, 'Technologies')">TECHNOLOGIES</button>
+    <button class="tablinks" onclick="openTab(event, 'RequestAProjit')">REQUEST A PROJIT</button>
+    <!-- <button class="tablinks" onclick="openTab(event, 'Careers')">CAREERS</button> -->
+    <button class="tablinks" onclick="openTab(event, 'Contact Us')">CONTACT US</button>
+  </div>
+  <!-- Tab content -->
+  <div id="About" class="tabcontent" style="height:800px;">
+    <h3>ABOUT</h3>
+    <div id="rightDiv">
+    <h3>CONCEPT</h3>
+      <p><span>The concept behind Projits Solutions is simple. It identifies a unit of IT work as a ProjIT, which is just a way of saying "IT Project" or "Project of IT". A Projit is defined here as a task or collective tasks which result in an output of a deliverable. It can be small, for example, writing a simple Program to produce a game. Or it can be a bigger task, such as building a customized web application for a company, for example, <a href="https://github.com/MohammadJassim/studygroops">Studygroops</a>. Projit Solutions offers complete end-to-end management and delivery of IT related projects for all industries.</span></p>
+	<img src="ProjitUML-2.png" style="width:590px;"><br />
+ <p class="caption">UML Modeling of a Projit</p>
+
+<p>The StudyGroops application was formed from a simple use case requirement specification: the goal of the application. Projits Solutions welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
+
+
+    </div> 
+    <div id="leftDiv">
+    <p><span>Projits Solutions Private Limited is an exciting Tech venture which delivers Projects of IT, <I>termed</I><b> Projits</b>, for different industries and organizations, <strong>in a wide range of Technologies</strong>. Offering end-to-end project implementation, inclusive of <b>Survey, Analysis, Scoping, Planning, Modelling, Designing, Implementation, Testing, Deployment, Delivery, Integration and Support</b> of the Projit, Projits Solutions has already launched the web platform for Free Social Education for the Education industry, <a href="https://github.com/MohammadJassim/studygroops">Studygroops.</a></span></p>
+ <img src="SG.png" style="width:580px;"></img><br />
+ <p class="caption">The <a href="https://github.com/MohammadJassim/studygroops">Study Groops</a> web application/platform for the Education industry</p>
+    <h3>VISION</h3>
+      <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. An example showcase is the Projit for the Education industry, <a href="https://github.com/MohammadJassim/studygroops">StudyGroops</a>.
+  </div>
+</div>
+
+  <div id="Projits" class="tabcontent" style="word-wrap:break-word;">
+    <h3>PROJITS</h3>
+    <p>1. <a href="https://www.studygroops.com">Studygroops</a></p>
+    <p>Conceptualized, designed and implemented the web application/platform to form, study and work in groups to encourage and facilitate education.<br />The project introduces a different approach to self-education, combining social networking and activity-based group learning.</p>
+    <img src="SG.png" style="width:570px;">&emsp;&emsp;
+    <img src="SG-4.png" style="width:570px;"><br /><br />
+    <p>2. <a href="https://mohammadjassim.github.io/projits/">Projits</a></p>
+    <p>The Projit to implement the Projits.com website was accomplished in a short timeframe. <br />Version 1 of the projits.com website is composed of HTML, CSS, and Javascript, hosted on a Linux (CentOS) VPS and served by Nginx.</p>
+    <img src="projits-3.png" style="width:570px;">&emsp;&emsp;
+    <img src="projits-5.png" style="width:570px;"><br /><br />
+
+    <table class="contentsTable">
+      <tr style="background-color:#335;color:white;">
+	<td width="18%">PROJIT NAME</td>
+	<td width="12%">PROJIT TYPE</td>
+	<td width="50%">PROJIT DESCRIPTION</td>
+	<td width="20%">TECHNOLOGIES</td><br />
+      </tr>
+
+      <tr>
+        <td><a href="https://github.com/MohammadJassim/studygroops">StudyGroops.com</a></td>
+        <td>Web Application</td>
+        <td>Conceptualized, designed and implemented the web application platform to form, study and work in groups in an effort to enable people to contribute positively to the community and society. The project introduces a different approach to self-education, combining .<br /><br />Coded in Ruby on Rails, the web application allows users to view a list of groups and join groups of their interest in their choice of location. It also allows users to create and setup group learning Activities and associated Tasks.</td>
+        <td>
+	  <li type="square">Cloud Linux VPS - CentOS 6.4</li>
+	  <li type="square">Ruby version 2.4.2</li> 
+	  <li type="square">Rails version 4.2.10</li>
+	  <li type="square">MySQL</li>
+	  <li type="square">NGINX</li>
+	  <li type="square">Phusion Passenger</li>
+	  <li type="square">SASS/CSS</li>
+	  <li type="square">Git</li>
+	  <li type="square">Bundler</li>
+	</td>
+      </tr>
+      <tr>
+        <td><a href="https://mohammadjassim.github.io/projits/">Projits.com</a></td>
+        <td>Website</td>
+        <td>The Projit to implement the Projits.com website was accomplished in a short timeframe. Version 1 of the projits.com website is composed of HTML, CSS, and Javascript, hosted on a Linux (CentOS) VPS and served by Nginx.</td>
+        <td><li>Cloud Linux VPS - CentOS 6.4</li>
+	    <li type="square">HTML</li>
+	    <li type="square">NGINX</li>
+  	    <li type="square">CSS</li> 
+ 	    <li type="square">Javascript</li>
+	</td>
+      </tr>
+
+      <tr>
+        <td>Email Service</td>
+        <td>Web Service</td>
+	<td>Implemented the Email client/server for StudyGroops.<br /><br />Setting up of a Virtual mail to Send and Receive emails for StudyGroops team was implemented on a Cloud Linux VPS running CentOS, using:<br /> 
+	  <li type="square">Postfix</li>
+	  <li type="square">Dovecot
+	  <li type="square">Nginx</li>
+	  <li type="square">Mutt</li></td>
+        <td>
+	  <li type="square">Cloud Linux VPS - CentOS 6.4</li> 
+	  <li type="square">Postfix</li> 
+	  <li type="square">Dovecot</li>
+	  <li type="square">Ruby version 2.4.2</li>
+	  <li type="square">Rails version 4.2.10</li>
+	  <li type="square">MySQL</li>
+	  <li type="square">NGINX </li>
+	  <li type="square">Phusion Passenger</li>
+	</td>
+      </tr>
+
+      <tr>
+        <td>Rock Paper Scissors</td>
+        <td>Game Application</td>                
+	<td>Implemented a simple Rock Paper Scissors game in C++. The two-player game allows the user to play the game with the computer as the second player n-times till the user chooses to quit.  </td>
+        <td>
+	  <li type="square">Xcode</li> 
+	  <li type="square">C++</li>
+	</td>
+      </tr>
+
+<!--
+      <tr>
+        <td>Balance Point</td>
+        <td>Application</td>                
+	<td>Implemented the application which outputs a Balance Point of an array of numbers.</td>
+
+        <td>
+	  <li type="square">Ruby 2.4.2</li>
+	</td>
+      </tr>
+-->
+    </table>
+  </div>
+
+  <div id="Projits In The Works" class="tabcontent">
+    <h3>PROJITS IN THE WORKS</h3>
+    <p><b>Financial Web App</b></p>
+    <p>Revamping the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.</p>
+      <img src="FinGoals-2.png"><p class="caption">TraceMe - Financial Goals App</p>
+
+    <table class="contentsTable">
+      <tr style="background-color:#335;color:white;">
+        <td width="15%">PROJIT NAME</td>
+        <td width="20%">PROJIT TYPE</td>
+        <td width="40%">PROJIT DESCRIPTION</td>
+        <td width="25%">TECHNOLOGIES</td>
+      </tr>
+
+      <tr>
+        <td>TraceMe</td>
+        <td>Financial Web Application</td>
+        <td>Revamping the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.<br /><br />The original was developed in Rails 1.x, however it required more work and resources and was taken offline. The newer version is expected to launch later in 2018.</td>
+        <td>
+          <li type="square">Developed on Mac OSX</li>
+          <li type="square">Ruby version 2.4.2</li>
+          <li type="square">Rails version 4.2.10</li>
+	  <li type="square">D3.js</li>
+          <li type="square">MySQL</li>
+          <li type="square">NGINX</li>
+          <li type="square">Phusion Passenger</li>
+          <li type="square">CSS</li>
+          <li type="square">Git</li>
+          <li type="square">Bundler</li>
+        </td>
+      </tr>
+
+    </table>
+    <p><b>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please reach out to us for a free consultation on the contact info detailed in the Contact Us tab.</b></p> 
+  </div>
+
+  <div id="Technologies" class="tabcontent">
+    <h3>Technologies</h3>
+    <div><h4 style="background-color:#456;color:#fff;">Web Development</h4><br />
+      <span>
+        <img src="ror1.png" alt="Ruby on Rails">
+        <img src="php.png" alt="PHP">
+        <img src="javascript.png" alt="Javascript">
+        <img src="html.png" alt="HTML">
+	<img src="css.png" alt="CSS">
+	<br /><br />
+      </span>
+    </div>
+    <div>
+    <h4 style="background-color:#456;color:#fff;">Software Development</h4><br />
+      <span>
+        <img src="c.png" alt="C">
+        <img src="cpp.png" alt="C++">
+        <img src="java1.png" alt="Java">
+        <img src="csharp.png" alt="C#">
+	<img src="excelvba1.png" alt="Excel VBA">
+	<img src="python.png" alt="Python">
+        <br /><br />
+      </span>
+      <br /><br />
+    </div>
+    <div>
+    <h4 style="background-color:#456;color:#fff;">Databases</h4><br />
+      <picture>
+        <img src="sql.png" alt="sql">
+        <img src="mysql.png" alt="MySQL">
+        <img src="sybase.png" alt="Sybase">
+        <img src="oracle.png" alt="Oracle">    
+        <br /><br />
+      </picture>
+      <br /><br />
+    </div>
+    <h4 style="background-color:#456;color:#fff;">Frameworks and Tools</h4><br />
+        <img src="rails.png" alt="Rails"> 
+  </div>
+
+  <div id="RequestAProjit" class="tabcontent">
+    <h3>REQUEST A PROJIT</h3>
+    <p>Have a Projit in mind? We can help you.</p>
+    <p>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please reach out to us for a free consultation at:</p>
+    Mobile: +92 3355684554<br />
+    Email: support@projits.com
+  </div>
+
+  <div id="Links" class="tabcontent">
+    <h3>LINKS</h3>
+    <p><li type="square">Studygroops: <a href="https://github.com/MohammadJassim/studygroops">StudyGroops</a></p><br />
+  </div>
+
+  <div id="Contact Us" class="tabcontent">
+    <h3>CONTACT US</h3>
+    <p>Have a business requirement, project request, or queries related to our work and services? If yes, please reach out to us on the details listed below.</p>
+    <div class="leftPane">
+
+    <form method="post">
+      <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
+      <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
+      <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
+      <input type="submit" value="Submit" />
+
+    </form>
+
+
+    <?php
+      if (isset($_POST['email']))  {
+	echo $_POST['email']  
+  	$admin_email = "support@projits.com";
+  	$email = $_POST['email'];
+  	$subject = $_POST['subject'];
+  	$comment = $_POST['comment'];
+ 
+  	$headers  = 'From:' . $email . "\r\n" .
+              'Reply-To: support@projits.com' . "\r\n" .
+              'MIME-Version: 1.0' . "\r\n" .
+              'Content-type: text/html; charset=UTF-8' . "\r\n"
+ 
+  	mail($admin_email, $subject, $comment, $headers);
+  
+  	echo "Thank you for contacting us!";
+      }
+  
+      else  {
+      }
+    ?>
+    </div>
+
+    <div class="rightPane">
+     <div style="border:1px solid gray;border-bottom-style:1px solid gray;border-top-style:none;border-right-style:none;border-left-style:none;">
+      <h3 style="text-decoration:underline;">PAKISTAN OFFICE</h3>
+      <address>Projits Solutions (Private) Limited<br />
+      F-11/2, Islamabad, Pakistan<br />
+      Phone (Cell): +92 3355684554<br />
+      Email: support@projits.com<br /><br />
+      </address>
+     </div>
+      <h3 style="text-decoration:underline;">AUSTRALIA OFFICE</h3>
+      <address>Projits Solutions (Private) Limited<br />
+      TBA <br />
+      Email: support@projits.com<br /><br />
+      </address>
+
+    </div>
+
+  </div>
+
+  <div id="Careers" class="tabcontent">
+    <h3>CAREERS</h3>
+    <p>Projits Solutions Pvt Ltd is a promising startup which aims to service not one but ALL the industries in the world.<br /><br />We expect our company to grow through our sheer persistence in the delivery of quality Projits to different industries and disciplines all over the world.<br /><br />At Projits Solutions, we welcome the opportunity to find placements for applicants suited to their skills and goals.<br /><br />This section is currently under development, however please revisit our Careers page regularly for new opportunities.</p><br />
+  </div>
+
+
+  <div id="bottomPane">
+    <p class="faded">Copyright &copy; 2018 by Projits Solutions Pvt Ltd. All Rights Reserved.
+  </div>
+
+<script>
+document.getElementById("defaultOpen").click();
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

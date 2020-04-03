@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cairo">
+  <title>Projits Solutions</title>
+  <style>
+    @font-face {
+        font-family: 'Cairo';
+        src: url(cairo.woff);
+    }
+
+    body {
+      font-family: 'Verdana'; 
+      font-size: 12pt;
+      font-weight: lighter;
+      font-stretch: ultra-expanded;
+      }
+
+    .header {
+      font-family: 'Gothic'; 
+      font-size: 64pt;
+      color: #335;
+      text-shadow: #789;
+      font-style: inherit;
+      text-justify: auto;
+      font-size-adjust: inherit;
+      }
+    /* Style the tab */
+    .tab {
+        overflow: hidden;    
+        background-color:cornflowerblue;    
+        margin-left: 90px;
+        width: 1180px;
+        margin-top: 170px;
+        position: relative;
+        #top: 10px;
+        font-family: 'Gothic';    
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 18px;
+        transition: 0.3s;
+        font-size: 17px;
+        color:darkblue;
+        font-family: 'Gothic';
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color:aqua;    
+        border: 2px solid black;    
+        color:midnightblue;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {    
+        background-color: gold; 
+        border: 2px solid blue;
+        color:darkblue;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        animation: fadeEffect 1s;    
+        padding: 6px 12px;
+        border: 0px solid #ccc;
+        border-top: none;
+        margin-left: 80px;
+        width: 1180px;
+        text-align: justify;
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    #topPane {
+        padding: 0px;
+        position: absolute;
+        left: 100px; 
+        top: 0px;   
+        #margin-top: -50px;
+        border: 0px solid black;
+    }
+
+    .innerFirst {
+        padding: 5px;
+        position: absolute;
+        top: 19px;
+        left: 950px;         
+        height: 192px;
+        width: 317px;
+        color: #000;    
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .promoTable {
+        width: 100%;
+        text-align: left;
+        border: 0px solid gray;
+    }
+
+    .promoTable td {
+        padding: 5px;
+        border: 1px solid gray;
+        border-bottom-style: 1px solid gray;
+        border-right-style: none;
+        border-left-style: none;
+        border-top-style: none;    
+        color: #334;
+    }
+
+    #bottomPane {
+        margin-left: 90px;    
+        bottom: 5%;
+    }
+
+    #rightDiv {    
+        left: 700px;
+        top: 285px;
+        width: 580px;
+        border: 0px solid black;
+        text-align: justify;
+        position: absolute;
+        word-wrap: break-word;
+        padding: 2px;
+        align: right;
+    }
+
+    #leftDiv {
+        padding: 2px;
+        top: 5px;
+        left: 5px;
+        position: relative;
+        width: 580px;
+        word-wrap: break-word;
+        border: 0px solid black;
+    }
+
+    .rightPane {
+        top: 395px;
+        left: 600px;
+        position: absolute;
+        padding: 1px;
+        border: 1px solid black;
+        text-align: justify;
+        font-size: 10pt;
+        align: right;
+        color: #789;
+        border-left-style: none;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: 1px solid gray;
+    }
+
+    .leftPane {
+        top: 285px;
+        width: 240px;
+        margin-left: 0px;
+        word-wrap: break-word;
+        border: 0px solid black;
+    }
+
+    .caption {
+        font-family: Cairo;
+        font-size: 8pt;
+        text-align: center;
+    }
+
+    .contentsTableHead tr {
+        border-bottom-style: 1px solid black;
+        color: white;
+        background-color: black;
+    }
+
+    .contentsTable td {
+        padding:6px;
+        vertical-align:top;
+    }
+
+    .faded {
+      color: #999;
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+  <style type="text/css">
+    ol li {
+      width: 50%;
+      float: left;      
+      list-style: none;
+      align-items: center;
+      align-self: auto;
+      align-content: center; 
+    }
+  </style>  
+</head>
+
+<body>
+  <br /><br />
+  <div id="topPane">
+    <p class="header">PROJITS SOLUTIONS</p>
+  </div>
+
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">ABOUT</button>
+    <button class="tablinks" onclick="openTab(event, 'Projits')">PROJITS</button>
+    <button class="tablinks" onclick="openTab(event, 'ProjitsInTheWorks')" id="InTheWorks">IN THE WORKS</button>
+    <button class="tablinks" onclick="openTab(event, 'Links')" id="links">LINKS</button>
+    <button class="tablinks" onclick="openTab(event, 'ProjitsTechnologies')" id="Technologies">TECHNOLOGIES</button>
+    <!-- <button class="tablinks" onclick="openTab(event, 'RequestAProjit')">REQUEST A PROJIT</button> -->
+    <!-- <button class="tablinks" onclick="openTab(event, 'Careers')">CAREERS</button> -->
+    <button class="tablinks" onclick="openTab(event, 'Contact Us')" id="contactus">CONTACT US</button>
+  </div>
+  <!-- Tab content -->
+  <div id="About" class="tabcontent" style="height:800px;">
+    <div id="rightDiv">      
+      <h3>VISION</h3>
+      <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. ProjITs offers complete end-to-end management and delivery of IT & Software projects for all industries.<br /><br />Vist the <a target="_self" href="javascript:document.getElementById('links').click();">Links</a> page for completed projects.
+      <h3>CLIENTS</h3>
+      <p>ProjITs welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
+    </div> 
+    <div id="leftDiv">
+      <h3>WELCOME TO PROJITS</h3>
+      <p><span>Projits is an exciting Tech venture delivering Projects of IT, termed <I>ProjITs</I>, for various industries and organizations, implemeted in a wide range of <a target="_self" href="javascript:document.getElementById('Technologies').click();">Technologies</a>.<br /></p>
+      <!-- <img src="ProjitUML-2.png" style="width:570px;"><br />      
+      <p class="caption">UML Modeling of a Projit</p>  -->
+      <p>Offering end-to-end project implementation, inclusive of: <span id="parent"><I><ol><li>Survey</li><li>Analysis</li><li>Scoping</li><li>Planning</li><li>Modelling</li><li>Designing</li><li>Implementation</li><li>Testing</li><li>Deployment</li><li>Delivery</li><li>Integration</li><li>Support</li></ol></I></span></p>
+    </div>
+  </div>
+
+  <div id="Projits" class="tabcontent" style="word-wrap:break-word;">
+    <h3>PROJITS</h3>
+    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
+    <p>Implemented the web application/platform to form, study and work in groups to encourage and facilitate education.<br />The project introduces a different approach to self-education, combining social networking and activity-based group learning.</p>
+    <!--<img src="SG.png" style="width:570px;">&emsp;&emsp;
+    <img src="SG-4.png" style="width:570px;"><br /><br /> -->
+    <p><a href="https://mohammadjassim.github.io/projits/">Rock Paper Scissors</a></p>
+    <p>Implemented a simple Rock Paper Scissors game in C++. The two-player game allows the user to play the game with the computer as the second player n-times till the user chooses to quit.</p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Tic Tac Toe</a></p>
+    <p>Implemented the Tic Tac Toe game in React.</p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Balance Point</a></p>
+    <p>Implemented the application which outputs a Balance Point of an array of numbers.</p>
+
+  </div>
+
+  <div id="ProjitsInTheWorks" class="tabcontent" style="word-wrap:break-word;">
+    <h3>IN THE WORKS</h3>
+    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
+    <p>Version 2 of the web application/platform to form, study and work in groups to encourage and facilitate education.<br /></p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Financial Goals App</a></p>
+    <p>Re-design and launch of the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.</p><br />
+    <p>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please <a target="_self" href="javascript:document.getElementById('contactus').click();">reach out to us</a> for a free consultation on the contact info detailed in the Contact Us tab.</p> 
+  </div>
+
+  <div id="ProjitsTechnologies" class="tabcontent">
+    <h3>Technologies</h3>
+    <div><h4 >Web Development</h4>
+      <span id="parent">
+        <ol>
+          <li type="blank">Ruby on Rails</li>
+          <li>PHP</li>
+          <li>Javascript</li>
+          <li>HTML</li>
+          <li>CSS/SCSS</li>
+        </ol>
+	      <br /><br /><br />
+      </span>
+    </div>
+    <div><h4>Software Development</h4>
+      <span id="parent">
+        <ol>
+          <li>C</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>Java</li>
+          <li>Visual Basic</li>
+          <li>Excel VBA</li>
+          <li>Python</li>
+          <li>Ruby</li>
+        </ol>
+	      <br /><br />
+      </span>
+      <br /><br />
+    </div>
+    <div><h4>Databases</h4>
+      <span id="parent">
+        <ol>
+          <li>SQL</li>
+          <li>MySQL</li>
+          <li>Sybase</li>
+          <li>Oracle</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
+        </ol>
+	      <br /><br /><br />
+      </span>
+    </div>
+    <div><h4>Frameworks and Tools</h4>
+      <span id="parent">
+        <ol>
+          <li>Ruby on Rails</li>
+        </ol>
+	      <br /><br />
+      </span>
+    </div>
+  </div>
+
+
+  <div id="Links" class="tabcontent">
+    <h3>LINKS</h3>
+    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Rock Paper Scissors</a></p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Tic Tac Toe</a></p>
+    <p><a href="https://mohammadjassim.github.io/projits/">Balance Point</a></p>
+  </div>
+
+  <div id="Contact Us" class="tabcontent">
+    <h3>CONTACT US</h3>
+    <p>Have a business requirement, project request, or queries related to our work and services? Reach out to us here:</p>
+    <div class="leftPane">
+      <form method="post">
+        <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
+        <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
+        <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+  </div>
+  
+  <div id="bottomPane">
+    <p class="faded">Copyright &copy; 2018 by Projits Solutions Pvt Ltd. All Rights Reserved.</p>
+  </div>
+
+<script>
+  document.getElementById("defaultOpen").click();
+  function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";  
+      
+      //alert(document.getElementsByClassName("tablinks"));
+      //evt.currentTarget.className; 
+      evt.currentTarget.className += " active";
+  }
+</script>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,368 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cairo">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Projits Solutions</title>
-  <style>
-    @font-face {
-        font-family: 'Cairo';
-        src: url(cairo.woff);
-    }
 
-    body {
-      font-family: 'Verdana'; 
-      font-size: 12pt;
-      font-weight: lighter;
-      font-stretch: ultra-expanded;
-      }
-
-    .header {
-      font-family: 'Gothic'; 
-      font-size: 64pt;
-      color: #335;
-      text-shadow: #789;
-      font-style: inherit;
-      text-justify: auto;
-      font-size-adjust: inherit;
-      }
-    /* Style the tab */
-    .tab {
-        overflow: hidden;    
-        background-color:cornflowerblue;    
-        margin-left: 90px;
-        width: 1180px;
-        margin-top: 170px;
-        position: relative;
-        #top: 10px;
-        font-family: 'Gothic';    
-    }
-
-    /* Style the buttons inside the tab */
-    .tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 18px;
-        transition: 0.3s;
-        font-size: 17px;
-        color:darkblue;
-        font-family: 'Gothic';
-    }
-
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-        background-color:aqua;    
-        border: 2px solid black;    
-        color:midnightblue;
-    }
-
-    /* Create an active/current tablink class */
-    .tab button.active {    
-        background-color: gold; 
-        border: 2px solid blue;
-        color:darkblue;
-    }
-
-    /* Style the tab content */
-    .tabcontent {
-        animation: fadeEffect 1s;    
-        padding: 6px 12px;
-        border: 0px solid #ccc;
-        border-top: none;
-        margin-left: 80px;
-        width: 1180px;
-        text-align: justify;
-    }
-
-    @keyframes fadeEffect {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-    #topPane {
-        padding: 0px;
-        position: absolute;
-        left: 100px; 
-        top: 0px;   
-        #margin-top: -50px;
-        border: 0px solid black;
-    }
-
-    .innerFirst {
-        padding: 5px;
-        position: absolute;
-        top: 19px;
-        left: 950px;         
-        height: 192px;
-        width: 317px;
-        color: #000;    
-        vertical-align: middle;
-        text-align: center;
-    }
-
-    .promoTable {
-        width: 100%;
-        text-align: left;
-        border: 0px solid gray;
-    }
-
-    .promoTable td {
-        padding: 5px;
-        border: 1px solid gray;
-        border-bottom-style: 1px solid gray;
-        border-right-style: none;
-        border-left-style: none;
-        border-top-style: none;    
-        color: #334;
-    }
-
-    #bottomPane {
-        margin-left: 90px;    
-        bottom: 5%;
-    }
-
-    #rightDiv {    
-        left: 700px;
-        top: 285px;
-        width: 580px;
-        border: 0px solid black;
-        text-align: justify;
-        position: absolute;
-        word-wrap: break-word;
-        padding: 2px;
-        align: right;
-    }
-
-    #leftDiv {
-        padding: 2px;
-        top: 5px;
-        left: 5px;
-        position: relative;
-        width: 580px;
-        word-wrap: break-word;
-        border: 0px solid black;
-    }
-
-    .rightPane {
-        top: 395px;
-        left: 600px;
-        position: absolute;
-        padding: 1px;
-        border: 1px solid black;
-        text-align: justify;
-        font-size: 10pt;
-        align: right;
-        color: #789;
-        border-left-style: none;
-        border-top-style: none;
-        border-right-style: none;
-        border-bottom-style: 1px solid gray;
-    }
-
-    .leftPane {
-        top: 285px;
-        width: 240px;
-        margin-left: 0px;
-        word-wrap: break-word;
-        border: 0px solid black;
-    }
-
-    .caption {
-        font-family: Cairo;
-        font-size: 8pt;
-        text-align: center;
-    }
-
-    .contentsTableHead tr {
-        border-bottom-style: 1px solid black;
-        color: white;
-        background-color: black;
-    }
-
-    .contentsTable td {
-        padding:6px;
-        vertical-align:top;
-    }
-
-    .faded {
-      color: #999;
-    }
-
-  </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
-  <style type="text/css">
-    ol li {
-      width: 50%;
-      float: left;      
-      list-style: none;
-      align-items: center;
-      align-self: auto;
-      align-content: center; 
-    }
-  </style>  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-
 <body>
-  <br /><br />
-  <div id="topPane">
-    <p class="header">PROJITS SOLUTIONS</p>
-  </div>
+  <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
+    <div class="nav-wrapper-custom container-custom">
+      <a id="logo-container" href="#" class="brand-logo custom-logo">
+        <img src="ps-logo-smaller.png">
+        <!-- Projits Solutions -->
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>                                    
+          <a href="javascript:openTab('home')" id="home_link" class="tablinks">
+            <span style="display:inline-flex;vertical-align:middle;">
+              <i class="material-icons muzli">home</i>&ensp;Home
+            </span>
+          </a>           
+        </li>
+        <li>
+          <a href="javascript:openTab('technologies')" id="technologies_link" class="tablinks">
+            <span style="display:inline-flex;vertical-align:middle;">
+              <i class="material-icons muzli">computer</i>&ensp;Technologies
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:openTab('links')" id="links_link" class="tablinks">
+            <span style="display:inline-flex;vertical-align:middle;">
+              <i class="material-icons muzli">link</i>&ensp;Links
+            </span>            
+          </a>
+        </li>
+        <li>
+          <a href="javascript:openTab('contactus')" id="contactus_link" class="tablinks">
+            <span style="display:inline-flex;vertical-align:middle;">
+              <i class="material-icons muzli">mail</i>&ensp;Contact Us
+            </span>            
+          </a>
+        </li>
+      </ul>
 
-  <!-- Tab links -->
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">ABOUT</button>
-    <button class="tablinks" onclick="openTab(event, 'Projits')">PROJITS</button>
-    <button class="tablinks" onclick="openTab(event, 'ProjitsInTheWorks')" id="InTheWorks">IN THE WORKS</button>
-    <button class="tablinks" onclick="openTab(event, 'Links')" id="links">LINKS</button>
-    <button class="tablinks" onclick="openTab(event, 'ProjitsTechnologies')" id="Technologies">TECHNOLOGIES</button>
-    <!-- <button class="tablinks" onclick="openTab(event, 'RequestAProjit')">REQUEST A PROJIT</button> -->
-    <!-- <button class="tablinks" onclick="openTab(event, 'Careers')">CAREERS</button> -->
-    <button class="tablinks" onclick="openTab(event, 'Contact Us')" id="contactus">CONTACT US</button>
-  </div>
-  <!-- Tab content -->
-  <div id="About" class="tabcontent" style="height:800px;">
-    <div id="rightDiv">      
-      <h3>VISION</h3>
-      <p>The vision of Projits Solutions is to integrate Technology solutions into various companies in different disciplines. ProjITs offers complete end-to-end management and delivery of IT & Software projects for all industries.<br /><br />Vist the <a target="_self" href="javascript:document.getElementById('links').click();">Links</a> page for completed projects.
-      <h3>CLIENTS</h3>
-      <p>ProjITs welcomes the opportunity to work with different industries to implement useful IT services to the organizations by identifying the goals and helping them achieve them with the use of Technology.</p>
-    </div> 
-    <div id="leftDiv">
-      <h3>WELCOME TO PROJITS</h3>
-      <p><span>Projits is an exciting Tech venture delivering Projects of IT, termed <I>ProjITs</I>, for various industries and organizations, implemeted in a wide range of <a target="_self" href="javascript:document.getElementById('Technologies').click();">Technologies</a>.<br /></p>
-      <!-- <img src="ProjitUML-2.png" style="width:570px;"><br />      
-      <p class="caption">UML Modeling of a Projit</p>  -->
-      <p>Offering end-to-end project implementation, inclusive of: <span id="parent"><I><ol><li>Survey</li><li>Analysis</li><li>Scoping</li><li>Planning</li><li>Modelling</li><li>Designing</li><li>Implementation</li><li>Testing</li><li>Deployment</li><li>Delivery</li><li>Integration</li><li>Support</li></ol></I></span></p>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Home</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">Menu</i></a>
     </div>
-  </div>
+  </nav>
+  <div class="section no-pad-bot custom-green" id="index-banner">    
+    <!-- Photo by Octavian Dan on Unsplash -->
+    <div class="container">
+      <br><br>
+      <!--<h1 class="header center orange-text">Projits Solutions</h1> -->
+      <h5 class="header col s12 orange-text light">
+        <img class="center-block" src="ps-logo-6.png">
+      </h5>  
+      <div class="row center">
+        <h5 class="header col s12 brown-text light">IT Projects Management and Software Solutions Services</h5>
+      </div>
+      <div class="row center">
+        <a href="javascript:openTab('contactus')" id="contactus_button" class="btn-large waves-effect waves-light blue">
+          Get in touch
+        </a>
+      </div>
+      <br><br>
 
-  <div id="Projits" class="tabcontent" style="word-wrap:break-word;">
-    <h3>PROJITS</h3>
-    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
-    <p>Implemented the web application/platform to form, study and work in groups to encourage and facilitate education.<br />The project introduces a different approach to self-education, combining social networking and activity-based group learning.</p>
-    <!--<img src="SG.png" style="width:570px;">&emsp;&emsp;
-    <img src="SG-4.png" style="width:570px;"><br /><br /> -->
-    <p><a href="https://mohammadjassim.github.io/projits/">Rock Paper Scissors</a></p>
-    <p>Implemented a simple Rock Paper Scissors game in C++. The two-player game allows the user to play the game with the computer as the second player n-times till the user chooses to quit.</p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Tic Tac Toe</a></p>
-    <p>Implemented the Tic Tac Toe game in React.</p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Balance Point</a></p>
-    <p>Implemented the application which outputs a Balance Point of an array of numbers.</p>
-
-  </div>
-
-  <div id="ProjitsInTheWorks" class="tabcontent" style="word-wrap:break-word;">
-    <h3>IN THE WORKS</h3>
-    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
-    <p>Version 2 of the web application/platform to form, study and work in groups to encourage and facilitate education.<br /></p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Financial Goals App</a></p>
-    <p>Re-design and launch of the web application for self banking and monetary goals achievements. The project introduces a different approach to self-banking.</p><br />
-    <p>For more details, or to inquire or submit a request for a Projit for your Industry or area of interest, please <a target="_self" href="javascript:document.getElementById('contactus').click();">reach out to us</a> for a free consultation on the contact info detailed in the Contact Us tab.</p> 
-  </div>
-
-  <div id="ProjitsTechnologies" class="tabcontent">
-    <h3>Technologies</h3>
-    <div><h4 >Web Development</h4>
-      <span id="parent">
-        <ol>
-          <li type="blank">Ruby on Rails</li>
-          <li>PHP</li>
-          <li>Javascript</li>
-          <li>HTML</li>
-          <li>CSS/SCSS</li>
-        </ol>
-	      <br /><br /><br />
-      </span>
-    </div>
-    <div><h4>Software Development</h4>
-      <span id="parent">
-        <ol>
-          <li>C</li>
-          <li>C++</li>
-          <li>C#</li>
-          <li>Java</li>
-          <li>Visual Basic</li>
-          <li>Excel VBA</li>
-          <li>Python</li>
-          <li>Ruby</li>
-        </ol>
-	      <br /><br />
-      </span>
-      <br /><br />
-    </div>
-    <div><h4>Databases</h4>
-      <span id="parent">
-        <ol>
-          <li>SQL</li>
-          <li>MySQL</li>
-          <li>Sybase</li>
-          <li>Oracle</li>
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-        </ol>
-	      <br /><br /><br />
-      </span>
-    </div>
-    <div><h4>Frameworks and Tools</h4>
-      <span id="parent">
-        <ol>
-          <li>Ruby on Rails</li>
-        </ol>
-	      <br /><br />
-      </span>
     </div>
   </div>
 
 
-  <div id="Links" class="tabcontent">
-    <h3>LINKS</h3>
-    <p><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a></p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Rock Paper Scissors</a></p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Tic Tac Toe</a></p>
-    <p><a href="https://mohammadjassim.github.io/projits/">Balance Point</a></p>
-  </div>
+  <div class="container">
+    <div class="section">
 
-  <div id="Contact Us" class="tabcontent">
-    <h3>CONTACT US</h3>
-    <p>Have a business requirement, project request, or queries related to our work and services? Reach out to us here:</p>
-    <div class="leftPane">
-      <form method="post">
-        <input name="email" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="YOUR EMAIL" /><br /><br />
-        <input name="subject" type="text" style="width:400px;height:40px;border-radius:5px;background-color:#efe;color:#000;" placeholder="SUBJECT" /><br /><br />
-        <textarea name="comment" rows="15" cols="40" style="width:400px;border-radius:5px;background-color:#efe;color:#000;" placeholder="TYPE YOUR MESSAGE HERE.."></textarea><br />
-        <input type="submit" value="Submit" />
-      </form>
+      <!--   Icon Section   -->
+      <div class="row tabcontent" id="home">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center gold-text">
+              <i class="material-icons">lightbulb_outline</i></h2>
+            <h5 class="center">VISION</h5>
+
+            <p class="lighter">Projits Solutions uses proven and trusted techniques to deliver IT and Software Solutions for your needs. ProjITs offers complete end-to-end management and delivery of IT & Software projects for all industries.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center indigo-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">CLIENTS</h5>
+
+            <p class="lighter">Projits Solutions welcomes the opportunity to work with industries to integrate advanced technologies to build practical and innovative solutions to address requirements.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">business_center</i></h2>
+            <h5 class="center">SERVICES</h5>
+
+            <p class="lighter">Projits is an exciting Tech venture delivering Projects of IT, termed <I>ProjITs</I>, for various industries and organizations, implemeted in a wide range of Technologies.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row tabcontent" id="links">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center lime-text">
+              <i class="material-icons">web</i></h2>
+            <h5 class="center">WEB</h5><br />
+            <ul>
+              <li><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a><br /><br />
+                Implemented the web application/platform to form, study and work in groups to encourage and facilitate education.
+              </li>
+            </ul>            
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center lime-text"><i class="material-icons">computer</i></h2>
+            <h5 class="center">DESKTOP</h5><br />
+            <ul>
+              <li><a href="#">Rock Paper Scissors</a><br /><br />
+                A C++ implementation of the classic Rock, Paper, Scissors game. 
+              </li>              
+            </ul>            
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center lime-text"><i class="material-icons">widgets</i></h2>
+            <h5 class="center">SCRIPTING</h5><br />
+            <ul>
+              <li><a href="#">Balance Point</a><br /><br />
+                A ruby implementation to find the Balance point of an array of arbitrary numbers.
+              </li>
+            </ul>  
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row tabcontent" id="technologies">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <span style="display:inline-flex;vertical-align:top;">
+            <h2 class="left teal-text" style="display:inline;">
+              <i class="material-icons">web</i></h2>&emsp;&emsp;
+            <h5 class="left" style="display:inline;vertical-align:bottom;">WEB</h5>
+          </span><br />
+            <ul>
+              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;Ruby on Rails</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;PHP</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;Javascript</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;HTML</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;CSS/SCSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <span style="display:inline-flex;vertical-align:top;">
+              <h2 class="left teal-text" style="display:inline;"><i class="material-icons">computer</i></h2>&emsp;&emsp;
+              <h5 class="left" style="display:inline;">CORE</h5>
+            </span><br />
+            <ul>
+              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;C</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;C++</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;C#</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;Java</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;Visual Basic</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">6</div>&emsp;Excel VBA</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">7</div>&emsp;Python</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">8</div>&emsp;Ruby</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <span style="display:inline-flex;vertical-align:top;">
+              <h2 class="left teal-text" style="display:inline;"><i class="material-icons">widgets</i></h2>&emsp;&emsp;
+              <h5 class="left" style="display:inline;">DATABASES</h5>
+            </span><br />
+            <ul>
+              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;SQL</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;MySQL</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;Sybase</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;Oracle</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;PostgreSQL</span></li>
+              <li><span style="display:inline-flex;"><div class="circle">6</div>&emsp;MongoDB</span></li>    
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row tabcontent" id="contactus">
+        <form action="mailto:mohammad.jassim@projits.com" method="post" enctype="text/plain">
+        <div class="center">
+          <div class="icon-block">
+            <span style="display:inline;vertical-align:auto;"></span>
+              <h2 class="center custom-blue-text" style="display:inline;vertical-align:middle;">              
+              <h5 class="center" style="display:inline;vertical-align:auto;">CONTACT US</h5></span><br />
+              <p>Thank you for your interest in Projits Solutions. Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
+            <div class="center">   
+                <span style="display:inline;vertical-align: auto;">                   
+                  <input class="contact-us-input cream" name="email" type="text" placeholder="YOUR EMAIL" style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" required />                       
+                  <input class="contact-us-input" name="subject" type="text" placeholder="SUBJECT" style="width:275px;height:30px;border-radius:5px;background-color: aliceblue;color:black;border:2px solid #01579b;padding:10px;" required />
+                </span><br />
+                <span style="display:inline-flex;">
+                  <textarea class="contact-us-textbox left" name="comment" placeholder="TYPE YOUR MESSAGE HERE.." required ></textarea><br /><br />
+                </span><br /><br />
+                <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:600px;"/>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>      
+
     </div>
 
-  </div>
   
-  <div id="bottomPane">
-    <p class="faded">Copyright &copy; 2018 by Projits Solutions Pvt Ltd. All Rights Reserved.</p>
+    <br><br>
   </div>
 
-<script>
-  document.getElementById("defaultOpen").click();
-  function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";  
-      
-      //alert(document.getElementsByClassName("tablinks"));
-      //evt.currentTarget.className; 
-      evt.currentTarget.className += " active";
-  }
-</script>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s16">
+          <h5 class="green-text text-lighten-2">PROJITS SOLUTIONS</h5>
+          <p class="blue-grey-text text-lighten-2 justify">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at affordable cost!</p>
+        </div>
+        <div class="col m4 s10 push-m1">
+          <h5 class="green-text text-lighten-2">PORTFOLIO</h5>
+          <ul>
+            <li><a class="muzli" href="https://github.com/MohammadJassim/studygroops">Studygroops</a></li>
+          </ul>
+        </div>
+        <div class="col m2 s6 pull-m0">
+          <h5 class="green-text text-lighten-2">CONTACT</h5>
+          <ul>
+            <li><a class="muzli" href="">Contact Us</a></li>
+          </ul>
+        </div>  
+      </div>
+    </div>
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Copyright &copy; 2018 by Projits Solutions Pvt Ltd. <a class="orange-text text-lighten-3" href="http://materializecss.com">All Rights Reserved.</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    //document.getElementById("defaultOpen").click();
+    //document.getElementById("home").style.display = "block";
+    openTab("home");
+    function openTab(tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("row tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {            
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");        
+        for (i = 0; i < tablinks.length; i++) {
+          document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
+          //tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+        document.getElementById(tabName).style.display = "block"; 
+        document.getElementById(tabName+"_link").closest('li').className += " active";
+    }
+
+    function contactus_text() {
+      alert('here');
+      const fs = require('fs');      
+      var fromEmail = document.getElementById("from");
+      var subject = document.getElementById("subject");
+      var msg = document.getElementById("comment");
+      fs.writeFile('Output.txt', fromEmail + " - " + subject + ": " + msg, (err) => { 
+        // In case of a error throw err. 
+        if (err) throw err; 
+      }) 
+    }
+  </script>  
+
+  </body>
 </html>
