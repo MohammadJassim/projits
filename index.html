@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Projits Solutions</title>
-
-  <!-- CSS  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>  
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <title>Projits Solutions</title>  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -14,8 +13,7 @@
   <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
     <div class="nav-wrapper-custom container-custom">
       <a id="logo-container" href="#" class="brand-logo custom-logo">
-        <img src="ps-logo-smaller.png">
-        <!-- Projits Solutions -->
+        <img src="ps-logo-smaller.png">        
       </a>
       <ul class="right hide-on-med-and-down">
         <li>                                    
@@ -49,22 +47,25 @@
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Home</a></li>
+        <li><a href="javascript:openTab('home')" id="home_link" class="tablinks">Home</a></li>
+        <li><a href="javascript:openTab('technologies')" id="technologies_link" class="tablinks">Technologies</a></li>
+        <li><a href="javascript:openTab('links')" id="links_link" class="tablinks">Links</a></li>
+        <li><a href="javascript:openTab('contactus')" id="contactus_link" class="tablinks">Contact Us</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons">Menu</i></a>
+        <i class="material-icons">Menu</i>
+      </a>
     </div>
   </nav>
-  <div class="section no-pad-bot custom-green" id="index-banner">    
-    <!-- Photo by Octavian Dan on Unsplash -->
+  <div class="section no-pad-bot green lighten-4" id="index-banner">    
     <div class="container">
       <br><br>
       <!--<h1 class="header center orange-text">Projits Solutions</h1> -->
       <h5 class="header col s12 orange-text light">
-        <img class="center-block" src="ps-logo-6.png">
+        <img class="center-block" src="ps-logo-letters-solutions.png">
       </h5>  
       <div class="row center">
-        <h5 class="header col s12 brown-text light">IT Projects Management and Software Solutions Services</h5>
+        <h5 class="header col s12 black-text light">House of Innovative Technology Projects</h5>
       </div>
       <div class="row center">
         <a href="javascript:openTab('contactus')" id="contactus_button" class="btn-large waves-effect waves-light blue">
@@ -84,29 +85,32 @@
       <div class="row tabcontent" id="home">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center gold-text">
-              <i class="material-icons">lightbulb_outline</i></h2>
-            <h5 class="center">VISION</h5>
-
-            <p class="lighter">Projits Solutions uses proven and trusted techniques to deliver IT and Software Solutions for your needs. ProjITs offers complete end-to-end management and delivery of IT & Software projects for all industries.</p>
+            <span class="spanster">
+            <h2 class="center yellow-text">
+              <i class="material-icons">lightbulb_outline</i></h2>&emsp;&emsp;
+            <h5 class="spanster-heading">VISION</h5>
+              </span>
+            <p class="lighter">With over 14 years of experience in delivering quality Software Solutions to Global clients, Projits Solutions applies proven and trusted techniques to timely deliver innovative Software Projects smartly. We offer complete end-to-end management, delivery and Integration of IT Projects for all industries.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center indigo-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">CLIENTS</h5>
-
-            <p class="lighter">Projits Solutions welcomes the opportunity to work with industries to integrate advanced technologies to build practical and innovative solutions to address requirements.</p>
+            <span class="spanster">
+            <h2 class="center lime-text"><i class="material-icons">group</i></h2>&emsp;&emsp;
+            <h5 class="spanster-heading">CLIENTS</h5>
+              </span>
+            <p class="lighter">Projits Solutions has experience in delivering to <span class="mark">Banking & Financial</span>, <span class="mark">Superannuation</span>, <span class="mark">Health</span>, <span class="mark">Education</span>, <span class="mark">Telecommunications</span>, <span class="mark">Software Houses</span>, and <span class="mark">Data Collection</span> corporate clients to name a few. Projits welcomes the opportunity to work with all industries in all locations.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">business_center</i></h2>
-            <h5 class="center">SERVICES</h5>
-
-            <p class="lighter">Projits is an exciting Tech venture delivering Projects of IT, termed <I>ProjITs</I>, for various industries and organizations, implemeted in a wide range of Technologies.</p>
+            <span class="spanster">
+              <h2 class="center brown-text lighten-4"><i class="material-icons">business_center</i></h2>&emsp;&emsp;
+              <h5 class="spanster-heading">SERVICES</h5>
+            </span>
+            <p class="lighter">Projits is an exciting Technology venture delivering Projects of IT, termed <I>Projits</I>, for all industries, implemeted in cutting edge Technologies and Frameworks. Our services include Web, Mobile, API, Libraries, and Standalone Desktop Applications Development and Integration including legacy Application overhaul.</p>
           </div>
         </div>
       </div>
@@ -115,12 +119,14 @@
       <div class="row tabcontent" id="links">
         <div class="col s12 m4">
           <div class="icon-block">
+            <span class="spanster">
             <h2 class="center lime-text">
-              <i class="material-icons">web</i></h2>
-            <h5 class="center">WEB</h5><br />
+              <i class="material-icons">web</i></h2>&emsp;&emsp;
+            <h5 class="spanster-heading">WEB</h5>
+            </span>
             <ul>
-              <li><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a><br /><br />
-                Implemented the web application/platform to form, study and work in groups to encourage and facilitate education.
+              <li><a href="https://github.com/MohammadJassim/studygroops">Studygroops</a><br />
+                <p class="lighter">Implemented the web application / platform to form, study and work in groups to encourage and facilitate education.</p>
               </li>
             </ul>            
           </div>
@@ -128,11 +134,13 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center lime-text"><i class="material-icons">computer</i></h2>
-            <h5 class="center">DESKTOP</h5><br />
+            <span class="spanster">
+            <h2 class="center lime-text"><i class="material-icons">computer</i></h2>&emsp;&emsp;
+            <h5 class="spanster-heading">DESKTOP</h5>
+            </span>
             <ul>
-              <li><a href="#">Rock Paper Scissors</a><br /><br />
-                A C++ implementation of the classic Rock, Paper, Scissors game. 
+              <li><a href="#">Rock Paper Scissors</a><br />
+                <p class="lighter">A C++ implementation of the classic Rock, Paper, Scissors game.</p>
               </li>              
             </ul>            
           </div>
@@ -140,11 +148,13 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center lime-text"><i class="material-icons">widgets</i></h2>
-            <h5 class="center">SCRIPTING</h5><br />
+            <span class="spanster">
+            <h2 class="center lime-text"><i class="material-icons">widgets</i></h2>&emsp;&emsp;
+            <h5 class="spanster-heading">SCRIPTING</h5>
+            </span>
             <ul>
-              <li><a href="#">Balance Point</a><br /><br />
-                A ruby implementation to find the Balance point of an array of arbitrary numbers.
+              <li><a href="#">Balance Point</a><br />
+                <p class="lighter">A ruby implementation to find the Balance point of an array of arbitrary numbers.</p>
               </li>
             </ul>  
           </div>
@@ -155,53 +165,53 @@
       <div class="row tabcontent" id="technologies">
         <div class="col s12 m4">
           <div class="icon-block">
-            <span style="display:inline-flex;vertical-align:top;">
-            <h2 class="left teal-text" style="display:inline;">
+            <span class="spanster">
+            <h2 class="left lime-text" style="display:inline;">
               <i class="material-icons">web</i></h2>&emsp;&emsp;
-            <h5 class="left" style="display:inline;vertical-align:bottom;">WEB</h5>
+            <h5 class="spanster-heading">WEB</h5>
           </span><br />
             <ul>
-              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;Ruby on Rails</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;PHP</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;Javascript</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;HTML</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;CSS/SCSS</span></li>
+              <li><span class="spanster-body"><div class="circle">1</div>&emsp;Ruby on Rails</span></li>
+              <li><span class="spanster-body"><div class="circle">2</div>&emsp;PHP</span></li>
+              <li><span class="spanster-body"><div class="circle">3</div>&emsp;Javascript</span></li>
+              <li><span class="spanster-body"><div class="circle">4</div>&emsp;HTML</span></li>
+              <li><span class="spanster-body"><div class="circle">5</div>&emsp;CSS/SCSS</span></li>
             </ul>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <span style="display:inline-flex;vertical-align:top;">
-              <h2 class="left teal-text" style="display:inline;"><i class="material-icons">computer</i></h2>&emsp;&emsp;
-              <h5 class="left" style="display:inline;">CORE</h5>
+            <span class="spanster">
+              <h2 class="left lime-text" style="display:inline;"><i class="material-icons">computer</i></h2>&emsp;&emsp;
+              <h5 class="spanster-heading">CORE</h5>
             </span><br />
             <ul>
-              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;C</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;C++</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;C#</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;Java</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;Visual Basic</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">6</div>&emsp;Excel VBA</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">7</div>&emsp;Python</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">8</div>&emsp;Ruby</span></li>
+              <li><span class="spanster-body"><div class="circle">1</div>&emsp;C</span></li>
+              <li><span class="spanster-body"><div class="circle">2</div>&emsp;C++</span></li>
+              <li><span class="spanster-body"><div class="circle">3</div>&emsp;C#</span></li>
+              <li><span class="spanster-body"><div class="circle">4</div>&emsp;Java</span></li>
+              <li><span class="spanster-body"><div class="circle">5</div>&emsp;Visual Basic</span></li>
+              <li><span class="spanster-body"><div class="circle">6</div>&emsp;Excel VBA</span></li>
+              <li><span class="spanster-body"><div class="circle">7</div>&emsp;Python</span></li>
+              <li><span class="spanster-body"><div class="circle">8</div>&emsp;Ruby</span></li>
             </ul>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <span style="display:inline-flex;vertical-align:top;">
-              <h2 class="left teal-text" style="display:inline;"><i class="material-icons">widgets</i></h2>&emsp;&emsp;
-              <h5 class="left" style="display:inline;">DATABASES</h5>
+            <span class="spanster">
+              <h2 class="left lime-text" style="display:inline;"><i class="material-icons">widgets</i></h2>&emsp;&emsp;
+              <h5 class="spanster-heading">DATABASES</h5>
             </span><br />
             <ul>
-              <li><span style="display:inline-flex;"><div class="circle">1</div>&emsp;SQL</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">2</div>&emsp;MySQL</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">3</div>&emsp;Sybase</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">4</div>&emsp;Oracle</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">5</div>&emsp;PostgreSQL</span></li>
-              <li><span style="display:inline-flex;"><div class="circle">6</div>&emsp;MongoDB</span></li>    
+              <li><span class="spanster-body"><div class="circle">1</div>&emsp;SQL</span></li>
+              <li><span class="spanster-body"><div class="circle">2</div>&emsp;MySQL</span></li>
+              <li><span class="spanster-body"><div class="circle">3</div>&emsp;Sybase</span></li>
+              <li><span class="spanster-body"><div class="circle">4</div>&emsp;Oracle</span></li>
+              <li><span class="spanster-body"><div class="circle">5</div>&emsp;PostgreSQL</span></li>
+              <li><span class="spanster-body"><div class="circle">6</div>&emsp;MongoDB</span></li>    
             </ul>
           </div>
         </div>
@@ -215,13 +225,13 @@
             <span style="display:inline;vertical-align:auto;"></span>
               <h2 class="center custom-blue-text" style="display:inline;vertical-align:middle;">              
               <h5 class="center" style="display:inline;vertical-align:auto;">CONTACT US</h5></span><br />
-              <p>Thank you for your interest in Projits Solutions. Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
+              <p>Thank you for your interest in Projits Solutions!<br /><br />Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
             <div class="center">   
                 <span style="display:inline;vertical-align: auto;">                   
                   <input class="contact-us-input cream" name="email" type="text" placeholder="YOUR EMAIL" style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" required />                       
                   <input class="contact-us-input" name="subject" type="text" placeholder="SUBJECT" style="width:275px;height:30px;border-radius:5px;background-color: aliceblue;color:black;border:2px solid #01579b;padding:10px;" required />
                 </span><br />
-                <span style="display:inline-flex;">
+                <span class="spanster-body">
                   <textarea class="contact-us-textbox left" name="comment" placeholder="TYPE YOUR MESSAGE HERE.." required ></textarea><br /><br />
                 </span><br /><br />
                 <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:600px;"/>
@@ -241,7 +251,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s16">
-          <h5 class="green-text text-lighten-2">PROJITS SOLUTIONS</h5>
+          <!-- <h5 class="green-text text-lighten-2">PROJITS SOLUTIONS</h5> -->          
+          <span class="spanster-body"><img src="ps-logo-smaller.png">&emsp;<h5 class="green-text text-lighten-2" style="line-height: 20px;">SOLUTIONS</h5></span>
           <p class="blue-grey-text text-lighten-2 justify">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at affordable cost!</p>
         </div>
         <div class="col m4 s10 push-m1">
