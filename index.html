@@ -10,9 +10,32 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <header>
+    <ul id="slide-out" class="sidenav">
+      <!--Social-->
+      <li>
+        <ul class="social">
+          <li><a><i class="fa fa-facebook"> </i></a></li>
+          <li><a><i class="fa fa-pinterest"> </i></a></li>
+          <li><a><i class="fa fa-google-plus"> </i></a></li>
+          <li><a><i class="fa fa-twitter"> </i></a></li>
+        </ul>
+      </li>
+      <!--/Social-->
+      <!-- Side navigation links -->
+      <li>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="javascript:openTab('home');">Home</a></li>
+          <li><a href="javascript:openTab('technologies');">Technologies</a></li>
+          <li><a href="javascript:openTab('links');">Links</a></li>
+          <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
+        </ul>  
+      </li>
+    </ul>    
+  </header>
   <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
     <div class="nav-wrapper-custom container-custom">
-      <a id="logo-container" href="#" class="brand-logo custom-logo">
+      <a id="logo-container" href="javascript:openTab('home');" class="brand-logo custom-logo">
         <img src="ps-logo-smaller.png">        
       </a>
       <ul class="right hide-on-med-and-down">
@@ -47,17 +70,17 @@
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="javascript:openTab('home')" id="home_link" class="tablinks">Home</a></li>
-        <li><a href="javascript:openTab('technologies')" id="technologies_link" class="tablinks">Technologies</a></li>
-        <li><a href="javascript:openTab('links')" id="links_link" class="tablinks">Links</a></li>
-        <li><a href="javascript:openTab('contactus')" id="contactus_link" class="tablinks">Contact Us</a></li>
+        <li><a href="javascript:openTab('home');">Home</a></li>
+        <li><a href="javascript:openTab('technologies');">Technologies</a></li>
+        <li><a href="javascript:openTab('links');">Links</a></li>
+        <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger">
         <i class="material-icons">Menu</i>
       </a>
     </div>
   </nav>
-  <div class="section no-pad-bot green lighten-4" id="index-banner">    
+  <div class="section no-pad-bot" id="index-banner">    
     <div class="container">
       <br><br>
       <!--<h1 class="header center orange-text">Projits Solutions</h1> -->
@@ -171,11 +194,11 @@
             <h5 class="spanster-heading">WEB</h5>
           </span><br />
             <ul>
-              <li><span class="spanster-body"><div class="circle">1</div>&emsp;Ruby on Rails</span></li>
-              <li><span class="spanster-body"><div class="circle">2</div>&emsp;PHP</span></li>
-              <li><span class="spanster-body"><div class="circle">3</div>&emsp;Javascript</span></li>
-              <li><span class="spanster-body"><div class="circle">4</div>&emsp;HTML</span></li>
-              <li><span class="spanster-body"><div class="circle">5</div>&emsp;CSS/SCSS</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Ruby on Rails</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;PHP</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Javascript</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;HTML</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;CSS/SCSS</span></li>
             </ul>
           </div>
         </div>
@@ -187,14 +210,14 @@
               <h5 class="spanster-heading">CORE</h5>
             </span><br />
             <ul>
-              <li><span class="spanster-body"><div class="circle">1</div>&emsp;C</span></li>
-              <li><span class="spanster-body"><div class="circle">2</div>&emsp;C++</span></li>
-              <li><span class="spanster-body"><div class="circle">3</div>&emsp;C#</span></li>
-              <li><span class="spanster-body"><div class="circle">4</div>&emsp;Java</span></li>
-              <li><span class="spanster-body"><div class="circle">5</div>&emsp;Visual Basic</span></li>
-              <li><span class="spanster-body"><div class="circle">6</div>&emsp;Excel VBA</span></li>
-              <li><span class="spanster-body"><div class="circle">7</div>&emsp;Python</span></li>
-              <li><span class="spanster-body"><div class="circle">8</div>&emsp;Ruby</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C++</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C#</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Java</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Visual Basic</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Excel VBA</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Python</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Ruby</span></li>
             </ul>
           </div>
         </div>
@@ -206,12 +229,12 @@
               <h5 class="spanster-heading">DATABASES</h5>
             </span><br />
             <ul>
-              <li><span class="spanster-body"><div class="circle">1</div>&emsp;SQL</span></li>
-              <li><span class="spanster-body"><div class="circle">2</div>&emsp;MySQL</span></li>
-              <li><span class="spanster-body"><div class="circle">3</div>&emsp;Sybase</span></li>
-              <li><span class="spanster-body"><div class="circle">4</div>&emsp;Oracle</span></li>
-              <li><span class="spanster-body"><div class="circle">5</div>&emsp;PostgreSQL</span></li>
-              <li><span class="spanster-body"><div class="circle">6</div>&emsp;MongoDB</span></li>    
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;SQL</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;MySQL</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Sybase</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Oracle</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;PostgreSQL</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;MongoDB</span></li>    
             </ul>
           </div>
         </div>
@@ -227,14 +250,16 @@
               <h5 class="center" style="display:inline;vertical-align:auto;">CONTACT US</h5></span><br />
               <p>Thank you for your interest in Projits Solutions!<br /><br />Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
             <div class="center">   
-                <span style="display:inline;vertical-align: auto;">                   
-                  <input class="contact-us-input cream" name="email" type="text" placeholder="YOUR EMAIL" style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" required />                       
-                  <input class="contact-us-input" name="subject" type="text" placeholder="SUBJECT" style="width:275px;height:30px;border-radius:5px;background-color: aliceblue;color:black;border:2px solid #01579b;padding:10px;" required />
+                <!-- style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" -->
+                <span class="spanster-contact-body">                   
+                  <input name="email" type="text" placeholder="YOUR EMAIL"  required />                       
+                  <input name="subject" type="text" placeholder="SUBJECT"  required />
                 </span><br />
-                <span class="spanster-body">
-                  <textarea class="contact-us-textbox left" name="comment" placeholder="TYPE YOUR MESSAGE HERE.." required ></textarea><br /><br />
-                </span><br /><br />
-                <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:600px;"/>
+                <span class="spanster-contact-body">
+                  <textarea name="comment" placeholder="TYPE YOUR MESSAGE HERE.." type="text" required ></textarea><br />
+                </span><br />
+                <!-- <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:550px;"/> -->
+                <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:55%;">
             </div>
           </div>
         </div>
@@ -252,8 +277,9 @@
       <div class="row">
         <div class="col l6 s16">
           <!-- <h5 class="green-text text-lighten-2">PROJITS SOLUTIONS</h5> -->          
-          <span class="spanster-body"><img src="ps-logo-smaller.png">&emsp;<h5 class="green-text text-lighten-2" style="line-height: 20px;">SOLUTIONS</h5></span>
-          <p class="blue-grey-text text-lighten-2 justify">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at affordable cost!</p>
+          <!-- <span class="spanster-body"><img src="ps-logo-smaller.png">&emsp;<h5 class="green-text text-lighten-2" style="line-height: 18px;">SOLUTIONS</h5></span> -->
+          <span class="spanster-body"><img src="ps-logo-smaller.png"></span>
+          <p class="blue-grey-text text-lighten-2 justify" style="margin:0;">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at affordable cost!</p>
         </div>
         <div class="col m4 s10 push-m1">
           <h5 class="green-text text-lighten-2">PORTFOLIO</h5>
@@ -264,7 +290,7 @@
         <div class="col m2 s6 pull-m0">
           <h5 class="green-text text-lighten-2">CONTACT</h5>
           <ul>
-            <li><a class="muzli" href="">Contact Us</a></li>
+            <li><a class="muzli" href="javascript:openTab('contactus');">Contact Us</a></li>
           </ul>
         </div>  
       </div>
