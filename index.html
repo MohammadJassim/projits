@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
   <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
@@ -46,21 +47,19 @@
         </li>
       </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="javascript:openTab('home');">Home</a></li>
-        <li><a href="javascript:openTab('technologies');">Technologies</a></li>
-        <li><a href="javascript:openTab('links');">Links</a></li>
-        <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons">Menu</i>        
-        <ul id="nav-mobile" class="sidenav">
+      <div class="nav-wrapper">
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="hide-on-med-and-up">          
           <li><a href="javascript:openTab('home');">Home</a></li>
           <li><a href="javascript:openTab('technologies');">Technologies</a></li>
           <li><a href="javascript:openTab('links');">Links</a></li>
-          <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
-        </ul>
-      </a>
+          <li><a href="javascript:openTab('contactus');">Contact Us</a></li>  
+        </ul> 
+        
+      </div>
+
     </div>
   </nav>
   <div class="section no-pad-bot custom-green" id="index-banner">    
@@ -242,6 +241,7 @@
                 </span><br />
                 <!-- <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:550px;"/> -->
                 <input id="contact_submit" type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:55%;">
+                <p class="notification" id="contact_notification"></p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@
           <!-- <h5 class="green-text text-lighten-2">PROJITS SOLUTIONS</h5> -->          
           <!-- <span class="spanster-body"><img src="ps-logo-smaller.png">&emsp;<h5 class="green-text text-lighten-2" style="line-height: 18px;">SOLUTIONS</h5></span> -->
           <span class="spanster-body"><img src="ps-logo-smaller.png"></span>
-          <p class="blue-grey-text text-lighten-2 justify" style="margin:0;">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at affordable cost!</p>
+          <p class="blue-grey-text text-lighten-2 justify" style="margin:0;">With over 14 years of experience in delivering Software Solutions and Platforms to diverse clients across continents, Projits Solutions designs smart solutions at best time estimates!</p>
         </div>
         <div class="col m4 s10 push-m1">
           <h5 class="green-text text-lighten-2">PORTFOLIO</h5>
@@ -291,10 +291,14 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script>
-    //document.getElementById("defaultOpen").click();
-    //document.getElementById("home").style.display = "block";
-    openTab("home");
+  <script>    
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      openTab("home");
+      var elem = document.querySelector('.sidenav');
+      var instance = new M.Sidenav(elem);    
+    });
+
     function openTab(tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("row tabcontent");
@@ -320,6 +324,7 @@
         if (err) throw err; 
       }) 
     }
+
   </script>  
 
   </body>
