@@ -4518,9 +4518,9 @@ nav .brand-logo.center {
 
 .center .spanster-contact-body textarea[type=text] {
   -webkit-appearance: none; -moz-appearance: none;
-  display: inline-flex;
+  display: inline-block;
   #width: 550px; 
-  width: 55%;
+  width: calc(100% - 45%);
   line-height: 40px;   
   height: 200px;
   border-radius: 5px;
@@ -4538,7 +4538,7 @@ nav .brand-logo.center {
   font-size: inherit;
   text-transform: inherit;
   display: inline;
-  width: 55%;
+  width: 60%;
   line-height: 3.5em;
   color: green;
   font-weight: bold;
@@ -4994,6 +4994,23 @@ small {
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   border-radius: 2px;
+}
+
+.custom-card {
+  top: 10%;
+  left: 10%;
+  position: absolute;
+  width: 15%;
+  float: left;
+  word-wrap: break-word;
+  margin: 0.5rem 0 1rem 0;
+  background-color: lightgreen;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  padding: 2px;
 }
 
 .card .card-title {
@@ -6014,7 +6031,7 @@ body.keyboard-focused .dropdown-content li:focus {
 div.circle {
   color: black;
   background-color: lightblue; #rgb(173, 165, 118); 
-  opacity: 0.6;
+  opacity: 0.7;
   width: 30px;
   height: 30px;
   #border: 2px solid rgb(0, 51, 128);

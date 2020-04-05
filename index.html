@@ -10,29 +10,6 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <header>
-    <ul id="slide-out" class="sidenav">
-      <!--Social-->
-      <li>
-        <ul class="social">
-          <li><a><i class="fa fa-facebook"> </i></a></li>
-          <li><a><i class="fa fa-pinterest"> </i></a></li>
-          <li><a><i class="fa fa-google-plus"> </i></a></li>
-          <li><a><i class="fa fa-twitter"> </i></a></li>
-        </ul>
-      </li>
-      <!--/Social-->
-      <!-- Side navigation links -->
-      <li>
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="javascript:openTab('home');">Home</a></li>
-          <li><a href="javascript:openTab('technologies');">Technologies</a></li>
-          <li><a href="javascript:openTab('links');">Links</a></li>
-          <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
-        </ul>  
-      </li>
-    </ul>    
-  </header>
   <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
     <div class="nav-wrapper-custom container-custom">
       <a id="logo-container" href="javascript:openTab('home');" class="brand-logo custom-logo">
@@ -76,11 +53,17 @@
         <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons">Menu</i>
+        <i class="material-icons">Menu</i>        
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="javascript:openTab('home');">Home</a></li>
+          <li><a href="javascript:openTab('technologies');">Technologies</a></li>
+          <li><a href="javascript:openTab('links');">Links</a></li>
+          <li><a href="javascript:openTab('contactus');">Contact Us</a></li>
+        </ul>
       </a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">    
+  <div class="section no-pad-bot custom-green" id="index-banner">    
     <div class="container">
       <br><br>
       <!--<h1 class="header center orange-text">Projits Solutions</h1> -->
@@ -99,7 +82,6 @@
 
     </div>
   </div>
-
 
   <div class="container">
     <div class="section">
@@ -123,7 +105,7 @@
             <h2 class="center lime-text"><i class="material-icons">group</i></h2>&emsp;&emsp;
             <h5 class="spanster-heading">CLIENTS</h5>
               </span>
-            <p class="lighter">Projits Solutions has experience in delivering to <span class="mark">Banking & Financial</span>, <span class="mark">Superannuation</span>, <span class="mark">Health</span>, <span class="mark">Education</span>, <span class="mark">Telecommunications</span>, <span class="mark">Software Houses</span>, and <span class="mark">Data Collection</span> corporate clients to name a few. Projits welcomes the opportunity to work with all industries in all locations.</p>
+            <p class="lighter">Projits Solutions has experience in service and delivery to <strong style="color:darkolivegreen;">Banking & Financial, Superannuation, Health, Education, Telecommunications, Software Houses, and Data Collection</strong> Global corporate clients. We welcomes the opportunity to work with all industries and in all locations.</p>
           </div>
         </div>
 
@@ -133,7 +115,7 @@
               <h2 class="center brown-text lighten-4"><i class="material-icons">business_center</i></h2>&emsp;&emsp;
               <h5 class="spanster-heading">SERVICES</h5>
             </span>
-            <p class="lighter">Projits is an exciting Technology venture delivering Projects of IT, termed <I>Projits</I>, for all industries, implemeted in cutting edge Technologies and Frameworks. Our services include Web, Mobile, API, Libraries, and Standalone Desktop Applications Development and Integration including legacy Application overhaul.</p>
+            <p class="lighter">Projits is an exciting Technology venture delivering Projects of IT, termed <I>Projits</I>, for all industries, implemeted in cutting edge Technologies and Frameworks. Our services include, though not limitied to, Web, Mobile, API, Libraries, and Standalone Applications Development and Integration.</p>
           </div>
         </div>
       </div>
@@ -242,7 +224,7 @@
 
 
       <div class="row tabcontent" id="contactus">
-        <form action="mailto:mohammad.jassim@projits.com" method="post" enctype="text/plain">
+        <form id="contact_form" action="mailto:mohammad.jassim@projits.com" method="post" enctype="text/plain">
         <div class="center">
           <div class="icon-block">
             <span style="display:inline;vertical-align:auto;"></span>
@@ -259,7 +241,7 @@
                   <textarea name="comment" placeholder="TYPE YOUR MESSAGE HERE.." type="text" required ></textarea><br />
                 </span><br />
                 <!-- <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:550px;"/> -->
-                <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:55%;">
+                <input id="contact_submit" type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:55%;">
             </div>
           </div>
         </div>
@@ -329,7 +311,6 @@
     }
 
     function contactus_text() {
-      alert('here');
       const fs = require('fs');      
       var fromEmail = document.getElementById("from");
       var subject = document.getElementById("subject");
