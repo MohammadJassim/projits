@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+  
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>  
   <link rel="shortcut icon" href="images/favicon.ico" />
   <title>Projits Solutions</title>  
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
   <nav class="custom-blue lighten-1" role="navigation" style="position:fixed;">    
@@ -49,17 +53,10 @@
 
       <!--<div class="nav-wrapper">-->
         <ul id="slide-out" class="sidenav">
-          <li>
-            <div class="user-view">
-              <div class="background">
-                <img class="circle" src="ps-logo-smaller.png">
-              </div>
-            </div>
-          </li>
-          <li><a href="javascript:openMTab('home')" class="sidenav-trigger">Home</a></li>
-          <li><a href="javascript:openMTab('technologies')" class="sidenav-trigger">Technologies</a></li>
-          <li><a href="javascript:openMTab('links')" class="sidenav-trigger">Links</a></li>
-          <li><a href="javascript:openMTab('contactus')" class="sidenav-trigger">Contact Us</a></li>  
+          <li><a href="javascript:openTab('home')" class="sidenav-trigger" id="home_link_m">Home</a></li>
+          <li><a href="javascript:openTab('technologies')" class="sidenav-trigger" id="technologies_link_m">Technologies</a></li>
+          <li><a href="javascript:openTab('links')" class="sidenav-trigger" id="links_link_m">Links</a></li>
+          <li><a href="javascript:openTab('contactus')" class="sidenav-trigger" id="contact_link_m">Contact Us</a></li>  
         </ul>       
         <a href="#" data-target="slide-out" class="sidenav-trigger">
           <i class="material-icons">menu</i>
@@ -299,39 +296,28 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script>    
-  
+    //openTab('home');
     document.addEventListener('DOMContentLoaded', function() {
       openTab("home");
-      var elem = document.querySelector('.sidenav');
-      var instance = new M.Sidenav(elem);    
+      var elems = document.querySelectorAll('.sidenav');
+      //var instance = new M.Sidenav(elem);    
+      var instance = M.Sidenav.init(elems, options)      
     });
 
-    function openTab(tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("row tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {            
-          tabcontent[i].style.display = "none";
+      function openTab(tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("row tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {            
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");        
+        for (i = 0; i < tablinks.length; i++) {
+          document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block"; 
+        document.getElementById(tabName+"_link").closest('li').className += " active";
       }
-      tablinks = document.getElementsByClassName("tablinks");        
-      for (i = 0; i < tablinks.length; i++) {
-        document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block"; 
-      document.getElementById(tabName+"_link").closest('li').className += " active";
-    }
-
-    function contactus_text() {
-      const fs = require('fs');      
-      var fromEmail = document.getElementById("from");
-      var subject = document.getElementById("subject");
-      var msg = document.getElementById("comment");
-      fs.writeFile('Output.txt', fromEmail + " - " + subject + ": " + msg, (err) => { 
-        // In case of a error throw err. 
-        if (err) throw err; 
-      }) 
-    }
 
   </script>  
-
   </body>
 </html>
