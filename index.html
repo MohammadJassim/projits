@@ -52,15 +52,15 @@
       </ul>
 
       <!--<div class="nav-wrapper">-->
-        <ul id="slide-out" class="sidenav">
-          <li><a href="javascript:openTab('home')" class="sidenav-trigger" id="home_link_m">Home</a></li>
-          <li><a href="javascript:openTab('technologies')" class="sidenav-trigger" id="technologies_link_m">Technologies</a></li>
-          <li><a href="javascript:openTab('links')" class="sidenav-trigger" id="links_link_m">Links</a></li>
-          <li><a href="javascript:openTab('contactus')" class="sidenav-trigger" id="contact_link_m">Contact Us</a></li>  
-        </ul>       
-        <a href="#" data-target="slide-out" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="javascript:openTab('home');">Home</a></li>
+        <li><a href="javascript:openTab('technologies');">Technologies</a></li>
+        <li><a href="javascript:openTab('links');">Links</a></li>
+        <li><a href="javascript:openTab('contactus');">Contact Us</a></li>  
+      </ul>       
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
 
       <!--</div> -->
 
@@ -301,22 +301,22 @@
       openTab("home");
       var elems = document.querySelectorAll('.sidenav');
       //var instance = new M.Sidenav(elem);    
-      var instance = M.Sidenav.init(elems, options)      
+      var instance = M.Sidenav.init(elems);      
     });
 
-      function openTab(tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("row tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {            
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");        
-        for (i = 0; i < tablinks.length; i++) {
-          document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block"; 
-        document.getElementById(tabName+"_link").closest('li').className += " active";
+    function openTab(tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("row tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {            
+          tabcontent[i].style.display = "none";
       }
+      tablinks = document.getElementsByClassName("tablinks");        
+      for (i = 0; i < tablinks.length; i++) {
+        document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block"; 
+      document.getElementById(tabName+"_link").closest('li').className += " active";
+    }
 
   </script>  
   </body>

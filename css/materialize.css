@@ -8032,12 +8032,17 @@ input[type=range]::-ms-thumb {
   right: 0;
   opacity: 0;
   height: 120vh;
+  #width: 0px;
+  height: 0px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 997;
   display: none;
 }
-
-
+/*
+#sidenav-overlay {
+  background-color: transparent;  
+}
+*/
 /*
     @license
     Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
