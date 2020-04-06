@@ -51,18 +51,16 @@
         </li>
       </ul>
 
-      <!--<div class="nav-wrapper">-->
-      <ul id="nav-mobile" class="sidenav">
+      <ul id="slide-out" class="sidenav sidenav-close">
         <li><a href="javascript:openTab('home');">Home</a></li>
         <li><a href="javascript:openTab('technologies');">Technologies</a></li>
         <li><a href="javascript:openTab('links');">Links</a></li>
         <li><a href="javascript:openTab('contactus');">Contact Us</a></li>  
       </ul>       
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+      <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"> -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
-
-      <!--</div> -->
 
     </div>
   </nav>
@@ -233,7 +231,7 @@
             <span style="display:inline;vertical-align:auto;"></span>
               <h2 class="center custom-blue-text" style="display:inline;vertical-align:middle;">              
               <h5 class="center" style="display:inline;vertical-align:auto;">CONTACT US</h5></span><br />
-              <p>Thank you for your interest in Projits Solutions!<br /><br />Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
+              <p class="center">Thank you for your interest in Projits Solutions!<br /><br />Kindly fill out your query below and someone will attend to you as soon as possible.</p><br />
             <div class="center">   
                 <!-- style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" -->
                 <span class="spanster-contact-body">                   
@@ -315,7 +313,7 @@
         document.getElementById(tablinks[i].id).closest('li').className = document.getElementById(tablinks[i].id).closest('li').className.replace(" active", "");
       }
       document.getElementById(tabName).style.display = "block"; 
-      document.getElementById(tabName+"_link").closest('li').className += " active";
+      document.getElementById(tabName+"_link").closest('li').className += " active";      
     }
 
   </script>  
