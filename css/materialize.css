@@ -4501,7 +4501,7 @@ nav .brand-logo.center {
   height: 30px;  
   background-color: aliceblue;
   #width: 250px; 
-  width: 25%;
+  width: 24%;
   line-height: 40px;
   border: 2px solid #01579b;
   color: black;
@@ -4516,13 +4516,14 @@ nav .brand-logo.center {
   width: 100%; 
   line-height: 40px; font-size: 17px;
   border: 2px solid #01579b;
+  padding: 10px;
 }
 
 .center .spanster-contact-body textarea[type=text] {
   -webkit-appearance: none; -moz-appearance: none;
   display: inline-block;
   #width: 550px; 
-  width: calc(100% - 45%);
+  width: calc(100% - 46%);
   line-height: 40px;   
   height: 200px;
   border-radius: 5px;
@@ -4530,11 +4531,11 @@ nav .brand-logo.center {
   color: black;
   border: 2px solid #01579b;
   padding: 10px;
-  box-sizing:border-box;
-  outline: #00838f;
+  #box-sizing:border-box;
+  #outline: #00838f;
 }
 
-.center input[type=submit] {
+.center .spanster-contact-body input[type=submit] {
   -webkit-appearance: none; -moz-appearance: none;
   font-style: normal;
   font-size: inherit;
@@ -4544,6 +4545,7 @@ nav .brand-logo.center {
   line-height: 3.5em;
   color: green;
   font-weight: bold;
+  #background-color: #006064;
   background: #fdfdfd; background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); 
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
   border: 1px solid #bbb;
@@ -6043,7 +6045,8 @@ div.circle {
   font-size: 10px;
   text-align: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: -999;
+  overflow-y: scroll;  
 }
 
 
