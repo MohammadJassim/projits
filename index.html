@@ -190,9 +190,13 @@
             <ul>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Ruby on Rails</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;PHP</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Twilio</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Javascript</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;HTML</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;CSS/SCSS</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;ASP</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;XML</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;VBScript</span></li>              
             </ul>
           </div>
         </div>
@@ -204,14 +208,14 @@
               <h5 class="spanster-heading">CORE</h5>
             </span><br />
             <ul>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;C</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;C++</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;C#</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;Java</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;Visual Basic</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;Excel VBA</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Python</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Ruby</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Java</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C++</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;C#</span></li>              
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Visual Basic</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;Excel VBA</span></li>
             </ul>
           </div>
         </div>
@@ -228,7 +232,9 @@
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Sybase</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;Oracle</span></li>
               <li><span class="spanster-body"><div class="circle"></div>&emsp;PostgreSQL</span></li>
-              <li><span class="spanster-body"><div class="circle"></div>&emsp;MongoDB</span></li>    
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;MongoDB</span></li>
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;ElasticSearch</span></li>    
+              <li><span class="spanster-body"><div class="circle"></div>&emsp;MS Access</span></li>
             </ul>
           </div>
         </div>
@@ -237,6 +243,7 @@
 
       <div class="row tabcontent" id="contactus">
         <form id="contact_form" action="mailto:mohammad.jassim@projits.com" method="post" enctype="text/plain">
+        <!-- <form action="https://formspree.io/mknvrdzw" method="POST"> -->
         <div class="center">
           <div class="icon-block">
             <span style="display:inline;vertical-align:auto;"></span>
@@ -246,14 +253,14 @@
             <div class="center">   
                 <!-- style="width:275px;height:30px;border-radius:5px;background-color:aliceblue; color: black;border:2px solid #01579b;padding:10px;" -->
                 <span class="spanster-contact-body">                   
-                  <input name="email" type="text" placeholder="YOUR EMAIL"  required />                       
-                  <input name="subject" type="text" placeholder="SUBJECT"  required />
+                  <input name="email" type="text" name="reply_to" placeholder="YOUR EMAIL"  required />                       
+                  <input name="subject" type="text" name="subject" placeholder="SUBJECT"  required />
                 </span><br />
                 <span class="spanster-contact-body">
-                  <textarea name="comment" placeholder="TYPE YOUR MESSAGE HERE.." type="text" required ></textarea><br />
+                  <textarea name="message" placeholder="TYPE YOUR MESSAGE HERE.." type="text" required ></textarea><br />
                 </span><br />
-                <!-- <input type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:550px;"/> -->
-                <input id="contact_submit" type="submit" value="Submit" class="btn-large waves-effect waves-light green" style="width:55%;">
+                <input type="submit" value="Send" class="btn-large waves-effect waves-light green" style="width:550px;"/> 
+                <!-- <input id="contact_submit" type="submit" value="Send" class="btn-large waves-effect waves-light green" style="width:55%;"> -->
                 <p class="notification" id="contact_notification"></p>
             </div>
           </div>
